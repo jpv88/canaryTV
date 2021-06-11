@@ -99,13 +99,11 @@
 		7FFED40026738A6100A8D967 /* CanaryTV */ = {
 			isa = PBXGroup;
 			children = (
-				7FFED40126738A6100A8D967 /* AppDelegate.swift */,
+				7FFED431267397D200A8D967 /* Base */,
+				7FFED432267397EC00A8D967 /* Commons */,
+				7FFED433267397FE00A8D967 /* Modules */,
 				7FFED40326738A6100A8D967 /* SceneDelegate.swift */,
 				7FFED40526738A6100A8D967 /* ViewController.swift */,
-				7FFED40726738A6100A8D967 /* Main.storyboard */,
-				7FFED40A26738A6800A8D967 /* Assets.xcassets */,
-				7FFED40C26738A6800A8D967 /* LaunchScreen.storyboard */,
-				7FFED40F26738A6800A8D967 /* Info.plist */,
 			);
 			path = CanaryTV;
 			sourceTree = "<group>";
@@ -126,6 +124,48 @@
 				7FFED42526738A6A00A8D967 /* Info.plist */,
 			);
 			path = CanaryTVUITests;
+			sourceTree = "<group>";
+		};
+		7FFED431267397D200A8D967 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7FFED40A26738A6800A8D967 /* Assets.xcassets */,
+				7FFED40126738A6100A8D967 /* AppDelegate.swift */,
+				7FFED40F26738A6800A8D967 /* Info.plist */,
+				7FFED40C26738A6800A8D967 /* LaunchScreen.storyboard */,
+				7FFED40726738A6100A8D967 /* Main.storyboard */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		7FFED432267397EC00A8D967 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		7FFED433267397FE00A8D967 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7FFED435267398DE00A8D967 /* Detail */,
+				7FFED434267398D200A8D967 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7FFED434267398D200A8D967 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7FFED435267398DE00A8D967 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

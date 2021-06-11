@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		7FFED40E26738A6800A8D967 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFED40C26738A6800A8D967 /* LaunchScreen.storyboard */; };
 		7FFED41926738A6A00A8D967 /* CanaryTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED41826738A6A00A8D967 /* CanaryTVTests.swift */; };
 		7FFED42426738A6A00A8D967 /* CanaryTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED42326738A6A00A8D967 /* CanaryTVUITests.swift */; };
+		7FFED43826739D8800A8D967 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7FFED43726739D8800A8D967 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFED43826739D8800A8D967 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +186,9 @@
 			dependencies = (
 			);
 			name = CanaryTV;
+			packageProductDependencies = (
+				7FFED43726739D8800A8D967 /* Alamofire */,
+			);
 			productName = CanaryTV;
 			productReference = 7FFED3FE26738A6100A8D967 /* CanaryTV.app */;
 			productType = "com.apple.product-type.application";
@@ -255,6 +260,9 @@
 				Base,
 			);
 			mainGroup = 7FFED3F526738A6100A8D967;
+			packageReferences = (
+				7FFED43626739D8800A8D967 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 7FFED3FF26738A6100A8D967 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -633,6 +641,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7FFED43626739D8800A8D967 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7FFED43726739D8800A8D967 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FFED43626739D8800A8D967 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7FFED3F626738A6100A8D967 /* Project object */;
 }

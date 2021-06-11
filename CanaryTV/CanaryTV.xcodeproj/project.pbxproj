@@ -16,6 +16,7 @@
 		7FFED41926738A6A00A8D967 /* CanaryTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED41826738A6A00A8D967 /* CanaryTVTests.swift */; };
 		7FFED42426738A6A00A8D967 /* CanaryTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED42326738A6A00A8D967 /* CanaryTVUITests.swift */; };
 		7FFED43826739D8800A8D967 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7FFED43726739D8800A8D967 /* Alamofire */; };
+		7FFED43B26739ED600A8D967 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 7FFED43A26739ED600A8D967 /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FFED43826739D8800A8D967 /* Alamofire in Frameworks */,
+				7FFED43B26739ED600A8D967 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +190,7 @@
 			name = CanaryTV;
 			packageProductDependencies = (
 				7FFED43726739D8800A8D967 /* Alamofire */,
+				7FFED43A26739ED600A8D967 /* Swinject */,
 			);
 			productName = CanaryTV;
 			productReference = 7FFED3FE26738A6100A8D967 /* CanaryTV.app */;
@@ -262,6 +265,7 @@
 			mainGroup = 7FFED3F526738A6100A8D967;
 			packageReferences = (
 				7FFED43626739D8800A8D967 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7FFED43926739ED600A8D967 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 7FFED3FF26738A6100A8D967 /* Products */;
 			projectDirPath = "";
@@ -486,7 +490,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2AUK3F279;
-				INFOPLIST_FILE = CanaryTV/Info.plist;
+				INFOPLIST_FILE = CanaryTV/Base/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,7 +509,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2AUK3F279;
-				INFOPLIST_FILE = CanaryTV/Info.plist;
+				INFOPLIST_FILE = CanaryTV/Base/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -651,6 +655,14 @@
 				version = 5.4.3;
 			};
 		};
+		7FFED43926739ED600A8D967 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -658,6 +670,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7FFED43626739D8800A8D967 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		7FFED43A26739ED600A8D967 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FFED43926739ED600A8D967 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

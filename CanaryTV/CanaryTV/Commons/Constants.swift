@@ -10,7 +10,7 @@ import Alamofire
 
 struct Constants {
     struct API {
-        static let host = "https://gizmo.rakuten.tv/"
+        static let host = "https://gizmo.rakuten.tv"
         static let headers: HTTPHeaders = [
             "Content-Type": "application/json"
         ]

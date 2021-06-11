@@ -26,6 +26,7 @@
 		7FFED4532673A6D000A8D967 /* GetTrailerURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4522673A6D000A8D967 /* GetTrailerURL.swift */; };
 		7FFED4562673AF4500A8D967 /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4552673AF4500A8D967 /* UIApplication+TopViewController.swift */; };
 		7FFED4582673AFCD00A8D967 /* UIViewController+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4572673AFCD00A8D967 /* UIViewController+ActivityIndicator.swift */; };
+		7FFED45A2673B15B00A8D967 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4592673B15B00A8D967 /* ErrorHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		7FFED4522673A6D000A8D967 /* GetTrailerURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTrailerURL.swift; sourceTree = "<group>"; };
 		7FFED4552673AF4500A8D967 /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
 		7FFED4572673AFCD00A8D967 /* UIViewController+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActivityIndicator.swift"; sourceTree = "<group>"; };
+		7FFED4592673B15B00A8D967 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			children = (
 				7FFED4542673AF3400A8D967 /* Utils */,
 				7FFED44C2673A4FE00A8D967 /* Constants.swift */,
+				7FFED4592673B15B00A8D967 /* ErrorHandler.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				7FFED44F2673A65D00A8D967 /* ListMovies.swift in Sources */,
 				7FFED4462673A3ED00A8D967 /* WebService.swift in Sources */,
 				7FFED40426738A6100A8D967 /* SceneDelegate.swift in Sources */,
+				7FFED45A2673B15B00A8D967 /* ErrorHandler.swift in Sources */,
 				7FFED4472673A3ED00A8D967 /* Endpoint.swift in Sources */,
 				7FFED4532673A6D000A8D967 /* GetTrailerURL.swift in Sources */,
 				7FFED4512673A6BB00A8D967 /* GetMovieInfo.swift in Sources */,

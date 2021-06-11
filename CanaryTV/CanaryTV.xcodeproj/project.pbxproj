@@ -19,7 +19,7 @@
 		7FFED43B26739ED600A8D967 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 7FFED43A26739ED600A8D967 /* Swinject */; };
 		7FFED4462673A3ED00A8D967 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4442673A3EC00A8D967 /* WebService.swift */; };
 		7FFED4472673A3ED00A8D967 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4452673A3ED00A8D967 /* Endpoint.swift */; };
-		7FFED44B2673A42A00A8D967 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED44A2673A42A00A8D967 /* Models.swift */; };
+		7FFED44B2673A42A00A8D967 /* FreeListMoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED44A2673A42A00A8D967 /* FreeListMoviesModel.swift */; };
 		7FFED44D2673A4FE00A8D967 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED44C2673A4FE00A8D967 /* Constants.swift */; };
 		7FFED44F2673A65D00A8D967 /* ListMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED44E2673A65D00A8D967 /* ListMovies.swift */; };
 		7FFED4512673A6BB00A8D967 /* GetMovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4502673A6BB00A8D967 /* GetMovieInfo.swift */; };
@@ -63,7 +63,7 @@
 		7FFED42526738A6A00A8D967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FFED4442673A3EC00A8D967 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		7FFED4452673A3ED00A8D967 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		7FFED44A2673A42A00A8D967 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		7FFED44A2673A42A00A8D967 /* FreeListMoviesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeListMoviesModel.swift; sourceTree = "<group>"; };
 		7FFED44C2673A4FE00A8D967 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7FFED44E2673A65D00A8D967 /* ListMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovies.swift; sourceTree = "<group>"; };
 		7FFED4502673A6BB00A8D967 /* GetMovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieInfo.swift; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 		7FFED4432673A37F00A8D967 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7FFED44A2673A42A00A8D967 /* Models.swift */,
+				7FFED44A2673A42A00A8D967 /* FreeListMoviesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -391,7 +391,7 @@
 				7FFED4512673A6BB00A8D967 /* GetMovieInfo.swift in Sources */,
 				7FFED4562673AF4500A8D967 /* UIApplication+TopViewController.swift in Sources */,
 				7FFED4582673AFCD00A8D967 /* UIViewController+ActivityIndicator.swift in Sources */,
-				7FFED44B2673A42A00A8D967 /* Models.swift in Sources */,
+				7FFED44B2673A42A00A8D967 /* FreeListMoviesModel.swift in Sources */,
 				7FFED44D2673A4FE00A8D967 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

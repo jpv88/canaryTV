@@ -13,7 +13,7 @@ struct ListMovies: Requestable {
     var method: HTTPMethod = .get
     var path: String
     var parameters: [String : String]? = nil
-    private let endpointPath = "lists/estrenos-imprescindibles-en-taquilla"
+    private let endpointPath = "lists/free-la-mejor-seleccion-de-peliculas"
     
     init() {
         let queryItems = [

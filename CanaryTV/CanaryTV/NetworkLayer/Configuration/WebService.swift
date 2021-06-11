@@ -18,6 +18,7 @@ class WebService {
     
     init() {
         decoder.dateDecodingStrategy = .deferredToDate
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
     }
     
     func loadFromWebService<T>(type: T.Type, endpoint: Endpoint, completionHandler: @escaping (T) -> Void, errorHandler: @escaping (Error) -> Void) where T: Decodable {

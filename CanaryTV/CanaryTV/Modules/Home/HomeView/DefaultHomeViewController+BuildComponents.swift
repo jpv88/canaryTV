@@ -9,6 +9,10 @@ import UIKit
 
 internal extension DefaultHomeViewController {
     
+    func buildView() {
+        title = Constant.title
+    }
+    
     func buildTableViewComponent() {
         let component = UITableView()
         component.backgroundColor = .clear

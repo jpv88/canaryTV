@@ -38,6 +38,7 @@
 		7FFED47726776B4B00A8D967 /* InitializeDependencyInjectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED47626776B4B00A8D967 /* InitializeDependencyInjectionService.swift */; };
 		7FFED47926776C9900A8D967 /* HomeInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED47826776C9900A8D967 /* HomeInjection.swift */; };
 		7FFED47C26777FDA00A8D967 /* RegisterUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED47B26777FDA00A8D967 /* RegisterUtils.swift */; };
+		7FFED47F26779A4700A8D967 /* ListMoviesTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED47E26779A4700A8D967 /* ListMoviesTableManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		7FFED47626776B4B00A8D967 /* InitializeDependencyInjectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeDependencyInjectionService.swift; sourceTree = "<group>"; };
 		7FFED47826776C9900A8D967 /* HomeInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInjection.swift; sourceTree = "<group>"; };
 		7FFED47B26777FDA00A8D967 /* RegisterUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUtils.swift; sourceTree = "<group>"; };
+		7FFED47E26779A4700A8D967 /* ListMoviesTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMoviesTableManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +321,7 @@
 		7FFED47D26779A0700A8D967 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7FFED47E26779A4700A8D967 /* ListMoviesTableManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				7FFED4472673A3ED00A8D967 /* Endpoint.swift in Sources */,
 				7FFED4532673A6D000A8D967 /* GetTrailerURL.swift in Sources */,
 				7FFED4752677601400A8D967 /* DefaultHomeViewController+Layout.swift in Sources */,
+				7FFED47F26779A4700A8D967 /* ListMoviesTableManager.swift in Sources */,
 				7FFED4512673A6BB00A8D967 /* GetMovieInfo.swift in Sources */,
 				7FFED4562673AF4500A8D967 /* UIApplication+TopViewController.swift in Sources */,
 				7FFED47726776B4B00A8D967 /* InitializeDependencyInjectionService.swift in Sources */,

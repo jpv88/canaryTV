@@ -9,8 +9,13 @@ import UIKit
 
 class DefaultHomeViewController: BaseViewController {
     
-    var tableView: UITableView!
+    internal var tableView: UITableView!
     var presenter: HomePresenter?
+    var tableManager: ListMoviesTableManager?
+    
+    internal enum Constant {
+        static let title = "Canary TV"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +25,7 @@ class DefaultHomeViewController: BaseViewController {
     
     override func buildComponents() {
         super.buildComponents()
+        buildView()
         buildTableViewComponent()
     }
     
@@ -35,4 +41,12 @@ extension DefaultHomeViewController: HomeViewController {
         
     }
         
+}
+
+extension DefaultHomeViewController: ListMoviesActions {
+    
+    func someMoviePressed() {
+        
+    }
+    
 }

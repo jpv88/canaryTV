@@ -32,6 +32,9 @@ internal extension InitializeDependencyInjectionService {
     private func registerViewController() {
         injector.register(HomeViewController.self) { r in
             let viewController = DefaultHomeViewController()
+            let tableManager = r.resolve(ListMoviesTableManager.self)
+            tableManager?.delegate = viewController
+            viewController.tableManager = tableManager
             viewController.presenter = r.resolve(HomePresenter.self)
             return viewController
         }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Swinject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,7 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = DefaultHomeViewController()
+        let injector = InitializeDependencyInjectionService.shared.injector
+        guard let homeVC = injector.resolve(HomeViewController.self) as? DefaultHomeViewController else { return }
+        window.rootViewController = homeVC
         self.window = window
         window.makeKeyAndVisible()
     }

@@ -37,6 +37,9 @@
 		7FFED47126775DFB00A8D967 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED47026775DFA00A8D967 /* BaseViewController.swift */; };
 		7FFED47326775FE400A8D967 /* DefaultHomeViewController+BuildComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED47226775FE400A8D967 /* DefaultHomeViewController+BuildComponents.swift */; };
 		7FFED4752677601400A8D967 /* DefaultHomeViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4742677601400A8D967 /* DefaultHomeViewController+Layout.swift */; };
+		7FFED47726776B4B00A8D967 /* InitializeDependencyInjectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED47626776B4B00A8D967 /* InitializeDependencyInjectionService.swift */; };
+		7FFED47926776C9900A8D967 /* HomeInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED47826776C9900A8D967 /* HomeInjection.swift */; };
+		7FFED47C26777FDA00A8D967 /* RegisterUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED47B26777FDA00A8D967 /* RegisterUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		7FFED47026775DFA00A8D967 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7FFED47226775FE400A8D967 /* DefaultHomeViewController+BuildComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultHomeViewController+BuildComponents.swift"; sourceTree = "<group>"; };
 		7FFED4742677601400A8D967 /* DefaultHomeViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultHomeViewController+Layout.swift"; sourceTree = "<group>"; };
+		7FFED47626776B4B00A8D967 /* InitializeDependencyInjectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeDependencyInjectionService.swift; sourceTree = "<group>"; };
+		7FFED47826776C9900A8D967 /* HomeInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInjection.swift; sourceTree = "<group>"; };
+		7FFED47B26777FDA00A8D967 /* RegisterUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,10 +179,11 @@
 		7FFED431267397D200A8D967 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				7FFED40A26738A6800A8D967 /* Assets.xcassets */,
+				7FFED47A26777FA400A8D967 /* Injection */,
+				7FFED40F26738A6800A8D967 /* Info.plist */,
 				7FFED40126738A6100A8D967 /* AppDelegate.swift */,
 				7FFED40326738A6100A8D967 /* SceneDelegate.swift */,
-				7FFED40F26738A6800A8D967 /* Info.plist */,
+				7FFED40A26738A6800A8D967 /* Assets.xcassets */,
 				7FFED40C26738A6800A8D967 /* LaunchScreen.storyboard */,
 				7FFED40726738A6100A8D967 /* Main.storyboard */,
 			);
@@ -207,6 +214,7 @@
 		7FFED434267398D200A8D967 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7FFED47826776C9900A8D967 /* HomeInjection.swift */,
 				7FFED45E2677586400A8D967 /* HomeInteractor */,
 				7FFED45F2677587300A8D967 /* HomePresenter */,
 				7FFED4602677587B00A8D967 /* HomeRouter */,
@@ -302,6 +310,15 @@
 				7FFED46C26775C1900A8D967 /* DefaultHomeRouter.swift */,
 			);
 			path = HomeRouter;
+			sourceTree = "<group>";
+		};
+		7FFED47A26777FA400A8D967 /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				7FFED47626776B4B00A8D967 /* InitializeDependencyInjectionService.swift */,
+				7FFED47B26777FDA00A8D967 /* RegisterUtils.swift */,
+			);
+			path = Injection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFED47C26777FDA00A8D967 /* RegisterUtils.swift in Sources */,
 				7FFED46426775B0000A8D967 /* DefaultHomeViewController.swift in Sources */,
 				7FFED46F26775CC700A8D967 /* Colors.swift in Sources */,
 				7FFED47326775FE400A8D967 /* DefaultHomeViewController+BuildComponents.swift in Sources */,
@@ -455,11 +473,13 @@
 				7FFED46226775AEC00A8D967 /* HomeViewController.swift in Sources */,
 				7FFED46B26775C0D00A8D967 /* HomeRouter.swift in Sources */,
 				7FFED45A2673B15B00A8D967 /* ErrorHandler.swift in Sources */,
+				7FFED47926776C9900A8D967 /* HomeInjection.swift in Sources */,
 				7FFED4472673A3ED00A8D967 /* Endpoint.swift in Sources */,
 				7FFED4532673A6D000A8D967 /* GetTrailerURL.swift in Sources */,
 				7FFED4752677601400A8D967 /* DefaultHomeViewController+Layout.swift in Sources */,
 				7FFED4512673A6BB00A8D967 /* GetMovieInfo.swift in Sources */,
 				7FFED4562673AF4500A8D967 /* UIApplication+TopViewController.swift in Sources */,
+				7FFED47726776B4B00A8D967 /* InitializeDependencyInjectionService.swift in Sources */,
 				7FFED46926775BFE00A8D967 /* DefaultHomePresenter.swift in Sources */,
 				7FFED4582673AFCD00A8D967 /* UIViewController+ActivityIndicator.swift in Sources */,
 				7FFED44B2673A42A00A8D967 /* FreeListMoviesModel.swift in Sources */,

@@ -9,6 +9,8 @@ import Foundation
 
 class DefaultHomePresenter: HomePresenter {
     
+    var router: HomeRouter?
+    
     func onViewDidLoad() {
         print("Im HomePresenter")
     }

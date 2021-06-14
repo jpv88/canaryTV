@@ -9,7 +9,7 @@ import UIKit
 
 class DefaultHomeViewController: BaseViewController {
     
-    var infoLabel: UILabel!
+    var tableView: UITableView!
     var presenter: HomePresenter?
     
     override func viewDidLoad() {
@@ -20,12 +20,12 @@ class DefaultHomeViewController: BaseViewController {
     
     override func buildComponents() {
         super.buildComponents()
-        buildInfoLabelComponent()
+        buildTableViewComponent()
     }
     
     override func setUpLayout() {
         super.setUpLayout()
-        layoutInfoLabelComponent()
+        layoutTableViewComponent()
     }
 }
 

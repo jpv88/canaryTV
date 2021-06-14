@@ -273,6 +273,7 @@
 		7FFED45D2677585D00A8D967 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				7FFED47D26779A0700A8D967 /* Utils */,
 				7FFED46326775B0000A8D967 /* DefaultHomeViewController.swift */,
 				7FFED47226775FE400A8D967 /* DefaultHomeViewController+BuildComponents.swift */,
 				7FFED4742677601400A8D967 /* DefaultHomeViewController+Layout.swift */,
@@ -313,6 +314,13 @@
 				7FFED47B26777FDA00A8D967 /* RegisterUtils.swift */,
 			);
 			path = Injection;
+			sourceTree = "<group>";
+		};
+		7FFED47D26779A0700A8D967 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

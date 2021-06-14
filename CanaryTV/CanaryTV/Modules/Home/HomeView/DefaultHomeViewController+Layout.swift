@@ -7,14 +7,17 @@
 
 import UIKit
 
-extension DefaultHomeViewController {
+internal extension DefaultHomeViewController {
     
-    func layoutInfoLabelComponent() {
-        view.addSubview(infoLabel)
+    func layoutTableViewComponent() {
+        view.addSubview(tableView)
         
-        infoLabel.translatesAutoresizingMaskIntoConstraints = false
-        infoLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        infoLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        
     }
     
 }

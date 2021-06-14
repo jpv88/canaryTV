@@ -7,13 +7,14 @@
 
 import UIKit
 
-extension DefaultHomeViewController {
+internal extension DefaultHomeViewController {
     
-    func buildInfoLabelComponent() {
-        let component = UILabel()
-        component.text = "Info Label"
-        component.backgroundColor = .white
-        infoLabel = component
+    func buildTableViewComponent() {
+        let component = UITableView()
+        component.backgroundColor = .clear
+        component.bounces = false
+        component.separatorStyle = .none
+        tableView = component
     }
     
 }

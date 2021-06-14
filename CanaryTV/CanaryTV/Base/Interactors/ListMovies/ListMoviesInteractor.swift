@@ -18,8 +18,13 @@ class ListMoviesInteractor: OutputInteractor<ListMoviesInteractor.Output> {
         super.init()
     }
     
-    override func execute() throws -> Output {
-        let result: [FreeListMoviesModel] = []
-        return result
+    override func execute(completion: @escaping (Output) -> Void, errorHandler: @escaping (Error) -> Void) {
+        webService.loadFromWebService(type: FreeListMoviesModel.self, endpoint: .List) { result in
+            completion([result])
+        } errorHandler: { error in
+            errorHandler(error)
+        }
+
     }
+    
 }

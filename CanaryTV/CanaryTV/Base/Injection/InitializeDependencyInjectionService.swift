@@ -8,6 +8,7 @@
 import Foundation
 import Swinject
 
+typealias ResolverInjection = Resolver
 class InitializeDependencyInjectionService {
     
     static let shared = InitializeDependencyInjectionService()

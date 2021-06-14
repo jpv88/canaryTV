@@ -6,13 +6,12 @@
 //
 
 import Foundation
-import Swinject
 
 class DefaultHomeRouter: HomeRouter {
     
-    private let resolver: Resolver!
+    private let resolver: ResolverInjection!
     
-    init(resolver: Resolver) {
+    init(resolver: ResolverInjection) {
         self.resolver = resolver
     }
     

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7FFED40226738A6100A8D967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED40126738A6100A8D967 /* AppDelegate.swift */; };
 		7FFED40426738A6100A8D967 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED40326738A6100A8D967 /* SceneDelegate.swift */; };
-		7FFED40626738A6100A8D967 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED40526738A6100A8D967 /* ViewController.swift */; };
 		7FFED40B26738A6800A8D967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FFED40A26738A6800A8D967 /* Assets.xcassets */; };
 		7FFED40E26738A6800A8D967 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFED40C26738A6800A8D967 /* LaunchScreen.storyboard */; };
 		7FFED41926738A6A00A8D967 /* CanaryTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED41826738A6A00A8D967 /* CanaryTVTests.swift */; };
@@ -62,7 +61,6 @@
 		7FFED3FE26738A6100A8D967 /* CanaryTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanaryTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFED40126738A6100A8D967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FFED40326738A6100A8D967 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7FFED40526738A6100A8D967 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7FFED40A26738A6800A8D967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FFED40D26738A6800A8D967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FFED40F26738A6800A8D967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				7FFED432267397EC00A8D967 /* Commons */,
 				7FFED433267397FE00A8D967 /* Modules */,
 				7FFED4402673A32F00A8D967 /* NetworkLayer */,
-				7FFED40526738A6100A8D967 /* ViewController.swift */,
 			);
 			path = CanaryTV;
 			sourceTree = "<group>";
@@ -459,7 +456,6 @@
 				7FFED46426775B0000A8D967 /* DefaultHomeViewController.swift in Sources */,
 				7FFED46F26775CC700A8D967 /* Colors.swift in Sources */,
 				7FFED47326775FE400A8D967 /* DefaultHomeViewController+BuildComponents.swift in Sources */,
-				7FFED40626738A6100A8D967 /* ViewController.swift in Sources */,
 				7FFED40226738A6100A8D967 /* AppDelegate.swift in Sources */,
 				7FFED44F2673A65D00A8D967 /* ListMovies.swift in Sources */,
 				7FFED47126775DFB00A8D967 /* BaseViewController.swift in Sources */,

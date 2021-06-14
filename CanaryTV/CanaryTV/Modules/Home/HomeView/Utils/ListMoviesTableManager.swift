@@ -20,12 +20,27 @@ class ListMoviesTableManager: NSObject, UITableViewDelegate, UITableViewDataSour
         dataSource = input
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        140
+    }
+    
+    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource?.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListMoviesTableViewCell.getIdentifier(), for: indexPath) as? ListMoviesTableViewCell else {
+            return UITableViewCell()
+        }
+        guard let dataSource = dataSource else {
+            return UITableViewCell()
+            
+        }
+        guard let name = dataSource[indexPath.row].data?.name, let data = dataSource[indexPath.row].data?.contents?.data else {
+            return UITableViewCell()
+        }
+        cell.fill(title: name, model: data)
+        return cell
     }
     
     

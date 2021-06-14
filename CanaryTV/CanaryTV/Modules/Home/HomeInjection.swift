@@ -23,8 +23,11 @@ internal extension InitializeDependencyInjectionService {
     
     private func registerPresenter() {
         injector.register(HomePresenter.self) { r in
-            let presenter = DefaultHomePresenter()
-            presenter.router = r.resolve(HomeRouter.self)
+            let presenter = DefaultHomePresenter(
+                view: r.resolve(HomeViewController.self)!,
+                router: r.resolve(HomeRouter.self)!,
+                listMoviesInteractor: r.resolve(ListMoviesInteractor.self)!
+            )
             return presenter
         }
     }
@@ -35,8 +38,11 @@ internal extension InitializeDependencyInjectionService {
             let tableManager = r.resolve(ListMoviesTableManager.self)
             tableManager?.delegate = viewController
             viewController.tableManager = tableManager
-            viewController.presenter = r.resolve(HomePresenter.self)
             return viewController
+        }
+        .initCompleted { r, homeViewController in
+            guard let vc = homeViewController as? DefaultHomeViewController else { return }
+            vc.presenter = r.resolve(HomePresenter.self)
         }
     }
 }

@@ -26,7 +26,9 @@ class InitializeDependencyInjectionService {
         registerUtils()
     }
     
-    private func registerInteractors() {}
+    private func registerInteractors() {
+        registerListMoviesInteractorInjector()
+    }
     
     private func registerModules() {
         registerHomeModule()

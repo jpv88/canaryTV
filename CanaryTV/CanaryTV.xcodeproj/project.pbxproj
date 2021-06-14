@@ -42,6 +42,9 @@
 		7FFED4832677A9D100A8D967 /* ListMoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4812677A9D100A8D967 /* ListMoviesTableViewCell.swift */; };
 		7FFED4842677A9D100A8D967 /* ListMoviesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFED4822677A9D100A8D967 /* ListMoviesTableViewCell.xib */; };
 		7FFED4862677AA9C00A8D967 /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4852677AA9C00A8D967 /* UITableViewCell+Identifier.swift */; };
+		7FFED48D2677B43400A8D967 /* Interactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED48C2677B43400A8D967 /* Interactors.swift */; };
+		7FFED48F2677B44600A8D967 /* ListMoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED48E2677B44600A8D967 /* ListMoviesInteractor.swift */; };
+		7FFED4922677B98200A8D967 /* ListMoviesInteractorInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4912677B98200A8D967 /* ListMoviesInteractorInjector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,9 @@
 		7FFED4812677A9D100A8D967 /* ListMoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMoviesTableViewCell.swift; sourceTree = "<group>"; };
 		7FFED4822677A9D100A8D967 /* ListMoviesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListMoviesTableViewCell.xib; sourceTree = "<group>"; };
 		7FFED4852677AA9C00A8D967 /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
+		7FFED48C2677B43400A8D967 /* Interactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactors.swift; sourceTree = "<group>"; };
+		7FFED48E2677B44600A8D967 /* ListMoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMoviesInteractor.swift; sourceTree = "<group>"; };
+		7FFED4912677B98200A8D967 /* ListMoviesInteractorInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMoviesInteractorInjector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +194,7 @@
 				7FFED40326738A6100A8D967 /* SceneDelegate.swift */,
 				7FFED40A26738A6800A8D967 /* Assets.xcassets */,
 				7FFED47A26777FA400A8D967 /* Injection */,
+				7FFED48B2677B3FF00A8D967 /* Interactors */,
 				7FFED40C26738A6800A8D967 /* LaunchScreen.storyboard */,
 			);
 			path = Base;
@@ -199,7 +206,6 @@
 				7FFED46E26775CC700A8D967 /* Colors.swift */,
 				7FFED44C2673A4FE00A8D967 /* Constants.swift */,
 				7FFED4592673B15B00A8D967 /* ErrorHandler.swift */,
-				7FFED4852677AA9C00A8D967 /* UITableViewCell+Identifier.swift */,
 				7FFED4542673AF3400A8D967 /* Utils */,
 			);
 			path = Commons;
@@ -218,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				7FFED47826776C9900A8D967 /* HomeInjection.swift */,
-				7FFED45E2677586400A8D967 /* HomeInteractor */,
 				7FFED45F2677587300A8D967 /* HomePresenter */,
 				7FFED4602677587B00A8D967 /* HomeRouter */,
 				7FFED45D2677585D00A8D967 /* HomeView */,
@@ -274,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				7FFED4552673AF4500A8D967 /* UIApplication+TopViewController.swift */,
+				7FFED4852677AA9C00A8D967 /* UITableViewCell+Identifier.swift */,
 				7FFED4572673AFCD00A8D967 /* UIViewController+ActivityIndicator.swift */,
 			);
 			path = Utils;
@@ -289,13 +295,6 @@
 				7FFED46126775AEC00A8D967 /* HomeViewController.swift */,
 			);
 			path = HomeView;
-			sourceTree = "<group>";
-		};
-		7FFED45E2677586400A8D967 /* HomeInteractor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HomeInteractor;
 			sourceTree = "<group>";
 		};
 		7FFED45F2677587300A8D967 /* HomePresenter */ = {
@@ -341,6 +340,24 @@
 				7FFED4822677A9D100A8D967 /* ListMoviesTableViewCell.xib */,
 			);
 			path = Collections;
+			sourceTree = "<group>";
+		};
+		7FFED48B2677B3FF00A8D967 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				7FFED4902677B96A00A8D967 /* ListMovies */,
+				7FFED48C2677B43400A8D967 /* Interactors.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		7FFED4902677B96A00A8D967 /* ListMovies */ = {
+			isa = PBXGroup;
+			children = (
+				7FFED48E2677B44600A8D967 /* ListMoviesInteractor.swift */,
+				7FFED4912677B98200A8D967 /* ListMoviesInteractorInjector.swift */,
+			);
+			path = ListMovies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,6 +505,7 @@
 				7FFED40226738A6100A8D967 /* AppDelegate.swift in Sources */,
 				7FFED4832677A9D100A8D967 /* ListMoviesTableViewCell.swift in Sources */,
 				7FFED44F2673A65D00A8D967 /* ListMovies.swift in Sources */,
+				7FFED48D2677B43400A8D967 /* Interactors.swift in Sources */,
 				7FFED47126775DFB00A8D967 /* BaseViewController.swift in Sources */,
 				7FFED4462673A3ED00A8D967 /* WebService.swift in Sources */,
 				7FFED46D26775C1900A8D967 /* DefaultHomeRouter.swift in Sources */,
@@ -499,6 +517,7 @@
 				7FFED47926776C9900A8D967 /* HomeInjection.swift in Sources */,
 				7FFED4472673A3ED00A8D967 /* Endpoint.swift in Sources */,
 				7FFED4532673A6D000A8D967 /* GetTrailerURL.swift in Sources */,
+				7FFED48F2677B44600A8D967 /* ListMoviesInteractor.swift in Sources */,
 				7FFED4752677601400A8D967 /* DefaultHomeViewController+Layout.swift in Sources */,
 				7FFED47F26779A4700A8D967 /* ListMoviesTableManager.swift in Sources */,
 				7FFED4512673A6BB00A8D967 /* GetMovieInfo.swift in Sources */,
@@ -507,6 +526,7 @@
 				7FFED46926775BFE00A8D967 /* DefaultHomePresenter.swift in Sources */,
 				7FFED4582673AFCD00A8D967 /* UIViewController+ActivityIndicator.swift in Sources */,
 				7FFED44B2673A42A00A8D967 /* FreeListMoviesModel.swift in Sources */,
+				7FFED4922677B98200A8D967 /* ListMoviesInteractorInjector.swift in Sources */,
 				7FFED44D2673A4FE00A8D967 /* Constants.swift in Sources */,
 				7FFED46726775BF100A8D967 /* HomePresenter.swift in Sources */,
 			);

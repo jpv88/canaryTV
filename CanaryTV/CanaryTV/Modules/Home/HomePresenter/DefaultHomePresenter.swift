@@ -9,7 +9,15 @@ import Foundation
 
 class DefaultHomePresenter: HomePresenter {
     
-    var router: HomeRouter?
+    private var view: HomeViewController
+    private let router: HomeRouter
+    private let listMoviesInteractor: ListMoviesInteractor
+    
+    init(view: HomeViewController, router: HomeRouter, listMoviesInteractor: ListMoviesInteractor) {
+        self.view = view
+        self.router = router
+        self.listMoviesInteractor = listMoviesInteractor
+    }
     
     func onViewDidLoad() {
         print("Im HomePresenter")

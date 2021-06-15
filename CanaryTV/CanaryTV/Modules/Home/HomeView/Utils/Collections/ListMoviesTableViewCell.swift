@@ -24,6 +24,7 @@ class ListMoviesTableViewCell: UITableViewCell {
         titleLabel.textColor = Colors.secondary
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.register(UINib(nibName: ListMoviesCollectionViewCell.getIdentifier(), bundle: nil), forCellWithReuseIdentifier: ListMoviesCollectionViewCell.getIdentifier())
     }
     
     func fill(title: String, model: [Datum]) {
@@ -40,8 +41,22 @@ extension ListMoviesTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         collectionDataSource?.count ?? 0
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListMoviesCollectionViewCell.getIdentifier(), for: indexPath) as? ListMoviesCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        guard let dataSource = collectionDataSource else {
+            return UICollectionViewCell()
+        }
+        guard let image = dataSource[indexPath.row].images?.snapshot, let imageURL = URL(string: image) else {
+            return UICollectionViewCell()
+        }
+        cell.fill(url: imageURL)
+        return cell
     }
     
 }

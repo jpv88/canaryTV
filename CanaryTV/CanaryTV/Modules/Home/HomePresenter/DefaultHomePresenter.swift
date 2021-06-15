@@ -27,12 +27,11 @@ class DefaultHomePresenter: HomePresenter {
         } errorHandler: { error in
             ErrorHandler.showError(error: error)
         }
-
     }
     
     func someMoviePressed(movieID: String) {
         getMovieDetailInfoInteractor.execute(input: movieID) { resul in
-            
+            print("ey")
         } errorHandler: { error in
             ErrorHandler.showError(error: error)
         }

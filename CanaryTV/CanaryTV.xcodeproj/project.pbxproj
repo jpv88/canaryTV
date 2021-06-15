@@ -238,7 +238,6 @@
 		7FFED433267397FE00A8D967 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				7FFED435267398DE00A8D967 /* Detail */,
 				7FFED434267398D200A8D967 /* Home */,
 			);
 			path = Modules;
@@ -253,13 +252,6 @@
 				7FFED45D2677585D00A8D967 /* HomeView */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		7FFED435267398DE00A8D967 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Detail;
 			sourceTree = "<group>";
 		};
 		7FFED4402673A32F00A8D967 /* NetworkLayer */ = {

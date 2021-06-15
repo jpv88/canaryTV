@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ListMoviesActions {
-    func someMoviePressed()
+    func someMoviePressed(movie: Datum)
     func updateUI()
 }
 
@@ -40,9 +40,17 @@ class ListMoviesTableManager: NSObject, UITableViewDelegate, UITableViewDataSour
         guard let name = dataSource[indexPath.row].data?.name, let data = dataSource[indexPath.row].data?.contents?.data else {
             return UITableViewCell()
         }
+        cell.delegate = self
         cell.fill(title: name, model: data)
         return cell
     }
     
+}
+
+extension ListMoviesTableManager: ListMoviesTableItemPressed {
     
+    func pressedItem(item: Datum) {
+        delegate?.someMoviePressed(movie: item)
+    }
+        
 }

@@ -15,7 +15,7 @@ class DefaultHomeRouter: HomeRouter {
         self.resolver = resolver
     }
     
-    func showDetailView() {
+    func showDetailView(movie: Datum) {
         
     }
         

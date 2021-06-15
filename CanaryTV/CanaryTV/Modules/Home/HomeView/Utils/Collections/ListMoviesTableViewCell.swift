@@ -7,11 +7,17 @@
 
 import UIKit
 
+protocol ListMoviesTableItemPressed {
+    func pressedItem(item: Datum)
+}
+
 class ListMoviesTableViewCell: UITableViewCell {
 
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var titleLabel: UILabel!
     private var collectionDataSource: [Datum]?
+    
+    var delegate: ListMoviesTableItemPressed?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,7 +48,7 @@ extension ListMoviesTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let dataSource = collectionDataSource else { return }
-        print("I am the element: \(dataSource[indexPath.row]) in the position: \(indexPath.row)")
+        delegate?.pressedItem(item: dataSource[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

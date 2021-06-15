@@ -9,4 +9,5 @@ import Foundation
 
 protocol HomePresenter {
     func onViewDidLoad()
+    func someMoviePressed(movie: Datum)
 }

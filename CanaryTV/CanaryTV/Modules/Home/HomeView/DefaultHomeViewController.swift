@@ -45,12 +45,12 @@ extension DefaultHomeViewController: HomeViewController {
 
 extension DefaultHomeViewController: ListMoviesActions {
     
+    func someMoviePressed(movie: Datum) {
+        presenter?.someMoviePressed(movie: movie)
+    }
+    
     func updateUI() {
         tableView.reloadData()
-    }
-        
-    func someMoviePressed() {
-        
     }
     
 }

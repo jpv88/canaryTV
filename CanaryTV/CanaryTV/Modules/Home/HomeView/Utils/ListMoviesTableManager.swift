@@ -36,7 +36,6 @@ class ListMoviesTableManager: NSObject, UITableViewDelegate, UITableViewDataSour
         }
         guard let dataSource = dataSource else {
             return UITableViewCell()
-            
         }
         guard let name = dataSource[indexPath.row].data?.name, let data = dataSource[indexPath.row].data?.contents?.data else {
             return UITableViewCell()

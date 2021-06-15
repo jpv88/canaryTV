@@ -30,7 +30,6 @@ class ListMoviesTableViewCell: UITableViewCell {
     func fill(title: String, model: [Datum]) {
         titleLabel.text = title
         collectionDataSource = model
-        //collectionView.reloadData()
     }
     
 }
@@ -42,7 +41,8 @@ extension ListMoviesTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        guard let dataSource = collectionDataSource else { return }
+        print("I am the element: \(dataSource[indexPath.row]) in the position: \(indexPath.row)")
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

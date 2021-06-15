@@ -117,13 +117,11 @@ struct AudioQuality: Codable {
 
 // MARK: - PurchaseType
 struct PurchaseType: Codable {
-    let type: String?
-    let id: String?
+    let type, id: String?
     let numericalId: Int?
     let isRecurring: Bool?
-    let name: String?
-    let label: String?
-    let kind: String?
+    let name, label, kind: String?
+    let expiresAfterInSeconds, availableTimeInSeconds: Int?
 }
 
 // MARK: - Rating

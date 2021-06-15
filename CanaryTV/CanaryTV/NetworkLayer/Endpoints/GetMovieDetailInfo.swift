@@ -10,10 +10,10 @@ import Alamofire
 
 struct GetMovieDetailInfo: Requestable {
     
-    var method: HTTPMethod = .post
+    var method: HTTPMethod = .get
     var path: String
     var parameters: [String : String]? = nil
-    private let endpointPath = "movies/"
+    private let endpointPath = "movies"
     
     init(movieID: String) {
         let baseURL = "\(Constants.API.host)/\(Constants.API.apiVersion)/\(endpointPath)/\(movieID)"

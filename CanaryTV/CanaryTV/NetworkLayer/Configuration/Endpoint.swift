@@ -15,7 +15,7 @@ enum Endpoint {
     case ActionMovies
     case CinemaMovies
     case ComedyMovies
-    case Movie(title: String)
+    case Movie(movieID: String)
     case Trailer
 }
 
@@ -40,8 +40,8 @@ extension Endpoint {
             return ListCinemaMovies()
         case .ComedyMovies:
             return ListComedyMovies()
-        case .Movie(title: let title):
-            return GetMovieInfo(title: title)
+        case .Movie(movieID: let id):
+            return GetMovieDetailInfo(movieID: id)
         case .Trailer:
             return GetTrailerURL()
         }

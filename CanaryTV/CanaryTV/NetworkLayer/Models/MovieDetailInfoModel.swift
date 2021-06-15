@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct MovieDetailInfoModel {
+struct MovieDetailInfoModel: Codable {
     
 }

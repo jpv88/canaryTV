@@ -12,11 +12,13 @@ class DefaultHomePresenter: HomePresenter {
     private var view: HomeViewController
     private let router: HomeRouter
     private let listMoviesInteractor: ListMoviesInteractor
+    private let getMovieDetailInfoInteractor: GetMovieDetailInteractor
     
-    init(view: HomeViewController, router: HomeRouter, listMoviesInteractor: ListMoviesInteractor) {
+    init(view: HomeViewController, router: HomeRouter, listMoviesInteractor: ListMoviesInteractor, getMovieDetailInfoInteractor: GetMovieDetailInteractor) {
         self.view = view
         self.router = router
         self.listMoviesInteractor = listMoviesInteractor
+        self.getMovieDetailInfoInteractor = getMovieDetailInfoInteractor
     }
     
     func onViewDidLoad() {
@@ -29,7 +31,12 @@ class DefaultHomePresenter: HomePresenter {
     }
     
     func someMoviePressed(movieID: String) {
-        
+        getMovieDetailInfoInteractor.execute(input: movieID) { resul in
+            
+        } errorHandler: { error in
+            ErrorHandler.showError(error: error)
+        }
+
     }
         
 }

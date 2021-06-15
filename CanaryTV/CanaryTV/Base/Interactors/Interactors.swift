@@ -32,5 +32,5 @@ class InOutInteractor<Input, Output> {
     
     init() {}
     
-    func execute(input: Input, completion: @escaping (Output) -> Void) { fatalError("Execute must be implemented!") }
+    func execute(input: Input, completion: @escaping (Output) -> Void, errorHandler: @escaping (Error) -> Void) { fatalError("Execute must be implemented!") }
 }

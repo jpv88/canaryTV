@@ -26,7 +26,8 @@ internal extension InitializeDependencyInjectionService {
             let presenter = DefaultHomePresenter(
                 view: r.resolve(HomeViewController.self)!,
                 router: r.resolve(HomeRouter.self)!,
-                listMoviesInteractor: r.resolve(ListMoviesInteractor.self)!
+                listMoviesInteractor: r.resolve(ListMoviesInteractor.self)!,
+                getMovieDetailInfoInteractor: r.resolve(GetMovieDetailInteractor.self)!
             )
             return presenter
         }

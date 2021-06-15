@@ -20,7 +20,7 @@
 		7FFED44B2673A42A00A8D967 /* ListMoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED44A2673A42A00A8D967 /* ListMoviesModel.swift */; };
 		7FFED44D2673A4FE00A8D967 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED44C2673A4FE00A8D967 /* Constants.swift */; };
 		7FFED44F2673A65D00A8D967 /* ListFreeMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED44E2673A65D00A8D967 /* ListFreeMovies.swift */; };
-		7FFED4512673A6BB00A8D967 /* GetMovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4502673A6BB00A8D967 /* GetMovieInfo.swift */; };
+		7FFED4512673A6BB00A8D967 /* GetMovieDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4502673A6BB00A8D967 /* GetMovieDetailInfo.swift */; };
 		7FFED4532673A6D000A8D967 /* GetTrailerURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4522673A6D000A8D967 /* GetTrailerURL.swift */; };
 		7FFED4562673AF4500A8D967 /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4552673AF4500A8D967 /* UIApplication+TopViewController.swift */; };
 		7FFED4582673AFCD00A8D967 /* UIViewController+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4572673AFCD00A8D967 /* UIViewController+ActivityIndicator.swift */; };
@@ -55,6 +55,8 @@
 		7FFED4A22678D1C300A8D967 /* UICollectionViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4A12678D1C300A8D967 /* UICollectionViewCell+Identifier.swift */; };
 		7FFED4A42678D4FE00A8D967 /* UIImageView+LoadURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4A32678D4FE00A8D967 /* UIImageView+LoadURL.swift */; };
 		7FFED4A62678F3F200A8D967 /* MovieDetailInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4A52678F3F100A8D967 /* MovieDetailInfoModel.swift */; };
+		7FFED4A92678F88800A8D967 /* GetMovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4A82678F88800A8D967 /* GetMovieDetailInteractor.swift */; };
+		7FFED4AB2678F8A800A8D967 /* GetMovieDetailInteractorInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4AA2678F8A800A8D967 /* GetMovieDetailInteractorInjector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +94,7 @@
 		7FFED44A2673A42A00A8D967 /* ListMoviesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListMoviesModel.swift; sourceTree = "<group>"; };
 		7FFED44C2673A4FE00A8D967 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7FFED44E2673A65D00A8D967 /* ListFreeMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFreeMovies.swift; sourceTree = "<group>"; };
-		7FFED4502673A6BB00A8D967 /* GetMovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieInfo.swift; sourceTree = "<group>"; };
+		7FFED4502673A6BB00A8D967 /* GetMovieDetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieDetailInfo.swift; sourceTree = "<group>"; };
 		7FFED4522673A6D000A8D967 /* GetTrailerURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTrailerURL.swift; sourceTree = "<group>"; };
 		7FFED4552673AF4500A8D967 /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
 		7FFED4572673AFCD00A8D967 /* UIViewController+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActivityIndicator.swift"; sourceTree = "<group>"; };
@@ -127,6 +129,8 @@
 		7FFED4A12678D1C300A8D967 /* UICollectionViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Identifier.swift"; sourceTree = "<group>"; };
 		7FFED4A32678D4FE00A8D967 /* UIImageView+LoadURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadURL.swift"; sourceTree = "<group>"; };
 		7FFED4A52678F3F100A8D967 /* MovieDetailInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInfoModel.swift; sourceTree = "<group>"; };
+		7FFED4A82678F88800A8D967 /* GetMovieDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieDetailInteractor.swift; sourceTree = "<group>"; };
+		7FFED4AA2678F8A800A8D967 /* GetMovieDetailInteractorInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieDetailInteractorInjector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,7 +284,7 @@
 		7FFED4422673A37500A8D967 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
-				7FFED4502673A6BB00A8D967 /* GetMovieInfo.swift */,
+				7FFED4502673A6BB00A8D967 /* GetMovieDetailInfo.swift */,
 				7FFED4522673A6D000A8D967 /* GetTrailerURL.swift */,
 				7FFED44E2673A65D00A8D967 /* ListFreeMovies.swift */,
 				7FFED49326788F7C00A8D967 /* ListLastMovies.swift */,
@@ -375,8 +379,9 @@
 		7FFED48B2677B3FF00A8D967 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				7FFED4902677B96A00A8D967 /* ListMovies */,
 				7FFED48C2677B43400A8D967 /* Interactors.swift */,
+				7FFED4902677B96A00A8D967 /* ListMovies */,
+				7FFED4A72678F86000A8D967 /* MovieDetail */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -388,6 +393,15 @@
 				7FFED4912677B98200A8D967 /* ListMoviesInteractorInjector.swift */,
 			);
 			path = ListMovies;
+			sourceTree = "<group>";
+		};
+		7FFED4A72678F86000A8D967 /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7FFED4A82678F88800A8D967 /* GetMovieDetailInteractor.swift */,
+				7FFED4AA2678F8A800A8D967 /* GetMovieDetailInteractorInjector.swift */,
+			);
+			path = MovieDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,9 +570,11 @@
 				7FFED4A22678D1C300A8D967 /* UICollectionViewCell+Identifier.swift in Sources */,
 				7FFED4752677601400A8D967 /* DefaultHomeViewController+Layout.swift in Sources */,
 				7FFED496267890B700A8D967 /* ListStoriesMovies.swift in Sources */,
+				7FFED4AB2678F8A800A8D967 /* GetMovieDetailInteractorInjector.swift in Sources */,
 				7FFED47F26779A4700A8D967 /* ListMoviesTableManager.swift in Sources */,
+				7FFED4A92678F88800A8D967 /* GetMovieDetailInteractor.swift in Sources */,
 				7FFED49C2678964900A8D967 /* ListComedyMovies.swift in Sources */,
-				7FFED4512673A6BB00A8D967 /* GetMovieInfo.swift in Sources */,
+				7FFED4512673A6BB00A8D967 /* GetMovieDetailInfo.swift in Sources */,
 				7FFED4562673AF4500A8D967 /* UIApplication+TopViewController.swift in Sources */,
 				7FFED4A62678F3F200A8D967 /* MovieDetailInfoModel.swift in Sources */,
 				7FFED47726776B4B00A8D967 /* InitializeDependencyInjectionService.swift in Sources */,

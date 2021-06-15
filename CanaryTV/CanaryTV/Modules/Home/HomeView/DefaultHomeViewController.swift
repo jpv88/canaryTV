@@ -37,14 +37,18 @@ class DefaultHomeViewController: BaseViewController {
 
 extension DefaultHomeViewController: HomeViewController {
     
-    func showLoadedInfo() {
-        
+    func showLoadedInfo(input: [ListMoviesModel]) {
+        tableManager?.set(input: input)
     }
         
 }
 
 extension DefaultHomeViewController: ListMoviesActions {
     
+    func updateUI() {
+        tableView.reloadData()
+    }
+        
     func someMoviePressed() {
         
     }

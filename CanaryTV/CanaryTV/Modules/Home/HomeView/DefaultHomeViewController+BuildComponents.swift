@@ -18,6 +18,9 @@ internal extension DefaultHomeViewController {
         component.backgroundColor = .clear
         component.bounces = false
         component.separatorStyle = .none
+        component.delegate = tableManager
+        component.dataSource = tableManager
+        component.register(UINib(nibName: ListMoviesTableViewCell.getIdentifier(), bundle: nil), forCellReuseIdentifier: ListMoviesTableViewCell.getIdentifier())
         tableView = component
     }
     

@@ -9,6 +9,7 @@ import UIKit
 
 protocol ListMoviesActions {
     func someMoviePressed()
+    func updateUI()
 }
 
 class ListMoviesTableManager: NSObject, UITableViewDelegate, UITableViewDataSource {
@@ -18,6 +19,7 @@ class ListMoviesTableManager: NSObject, UITableViewDelegate, UITableViewDataSour
     
     func set(input: [ListMoviesModel]) {
         dataSource = input
+        delegate?.updateUI()
     }
     
     internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

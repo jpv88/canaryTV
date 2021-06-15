@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HomeViewController {
-    func showLoadedInfo()
+    func showLoadedInfo(input: [ListMoviesModel])
 }

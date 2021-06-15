@@ -20,12 +20,10 @@ class DefaultHomePresenter: HomePresenter {
     }
     
     func onViewDidLoad() {
-        print("Im HomePresenter")
-        
         listMoviesInteractor.execute { result in
-            print("YES")
+            self.view.showLoadedInfo(input: result)
         } errorHandler: { error in
-            print("NO")
+            ErrorHandler.showError(error: error)
         }
 
     }

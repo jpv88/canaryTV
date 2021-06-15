@@ -38,6 +38,38 @@ class ListMoviesInteractor: OutputInteractor<ListMoviesInteractor.Output> {
         } errorHandler: { error in
             group.leave()
         }
+        
+        group.enter()
+        webService.loadFromWebService(type: ListMoviesModel.self, endpoint: .StoriesMovies) { result in
+            moviesList.append(result)
+            group.leave()
+        } errorHandler: { error in
+            group.leave()
+        }
+        
+        group.enter()
+        webService.loadFromWebService(type: ListMoviesModel.self, endpoint: .ActionMovies) { result in
+            moviesList.append(result)
+            group.leave()
+        } errorHandler: { error in
+            group.leave()
+        }
+        
+        group.enter()
+        webService.loadFromWebService(type: ListMoviesModel.self, endpoint: .CinemaMovies) { result in
+            moviesList.append(result)
+            group.leave()
+        } errorHandler: { error in
+            group.leave()
+        }
+        
+        group.enter()
+        webService.loadFromWebService(type: ListMoviesModel.self, endpoint: .ComedyMovies) { result in
+            moviesList.append(result)
+            group.leave()
+        } errorHandler: { error in
+            group.leave()
+        }
 
         group.notify(queue: .main) {
             // All requests completed

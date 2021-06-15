@@ -15,7 +15,7 @@ class ListMoviesTableViewCell: UITableViewCell {
         backgroundColor = .none
     }
     
-    func fill(title: String, model: [DataContent]) {
+    func fill(title: String, model: [Datum]) {
         
     }
 }

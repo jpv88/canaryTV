@@ -15,26 +15,27 @@ struct ListMoviesModel: Codable {
 // MARK: - DataClass
 struct DataClass: Codable {
     let type, id: String?
-    let numericalID: Int?
+    let numericalId: Int?
     let category, shortName, contentType: String?
     let isB2B: Bool?
     let wktvCode: String?
     let onlyCoupon, isRecommendation: Bool?
-    let name, kind: String?
+    let name: String?
+    let kind: String?
     let contents: Contents?
 }
 
 // MARK: - Contents
 struct Contents: Codable {
-    let data: [DataContent]?
+    let data: [Datum]?
     let meta: Meta?
 }
 
 // MARK: - Datum
-struct DataContent: Codable {
+struct Datum: Codable{
     let type: String?
     let id: String?
-    let numericalID: Int?
+    let numericalId: Int?
     let title: String?
     let year, duration: Int?
     let label: String?
@@ -49,7 +50,7 @@ struct DataContent: Codable {
 struct Classification: Codable {
     let type: String?
     let id: String?
-    let numericalID: Int?
+    let numericalId: Int?
     let name: String?
     let age: Int?
     let adult: Bool?
@@ -69,7 +70,7 @@ struct HighlightedScore: Codable {
 struct Site: Codable {
     let type: String?
     let id: String?
-    let numericalID: Int?
+    let numericalId: Int?
     let name: String?
     let showImage: Bool?
     let scale: Int?
@@ -79,20 +80,35 @@ struct Site: Codable {
 // MARK: - Images
 struct Images: Codable {
     let artwork, snapshot: String?
+    let mobileSpotlight: String?
+    let ribbons: [Ribbon]?
+}
+
+// MARK: - Ribbon
+struct Ribbon: Codable {
+    let type: String?
+    let id: String?
+    let numericalId: Int?
+    let name: String?
+    let color: String?
+    let textColor: String?
+    let position: String?
+    let localizedName: String?
+    let image: String?
 }
 
 // MARK: - Labels
 struct Labels: Codable {
-    let audioQualities, hdrTypes: [Quality]?
+    let audioQualities, hdrTypes: [AudioQuality]?
     let purchaseTypes: [PurchaseType]?
-    let videoQualities: [Quality]?
+    let videoQualities: [AudioQuality]?
 }
 
 // MARK: - AudioQuality
-struct Quality: Codable {
+struct AudioQuality: Codable {
     let type: String?
     let id: String?
-    let numericalID: Int?
+    let numericalId: Int?
     let name: String?
     let abbr: String?
     let image: String?
@@ -103,19 +119,17 @@ struct Quality: Codable {
 struct PurchaseType: Codable {
     let type: String?
     let id: String?
-    let numericalID: Int?
+    let numericalId: Int?
     let isRecurring: Bool?
     let name: String?
     let label: String?
     let kind: String?
-    let expiresAfterInSeconds, availableTimeInSeconds: String?
 }
 
 // MARK: - Rating
 struct Rating: Codable {
     let average, scale: Int?
 }
-
 
 // MARK: - Meta
 struct Meta: Codable {
@@ -127,3 +141,4 @@ struct Pagination: Codable {
     let page, count, perPage, offset: Int?
     let totalPages: Int?
 }
+

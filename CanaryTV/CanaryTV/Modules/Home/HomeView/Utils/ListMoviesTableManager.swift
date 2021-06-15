@@ -13,10 +13,10 @@ protocol ListMoviesActions {
 
 class ListMoviesTableManager: NSObject, UITableViewDelegate, UITableViewDataSource {
     
-    private var dataSource: [FreeListMoviesModel]?
+    private var dataSource: [ListMoviesModel]?
     var delegate: ListMoviesActions?
     
-    func set(input: [FreeListMoviesModel]) {
+    func set(input: [ListMoviesModel]) {
         dataSource = input
     }
     

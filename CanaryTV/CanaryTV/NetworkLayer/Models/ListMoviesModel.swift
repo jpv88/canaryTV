@@ -7,8 +7,8 @@
 
 import Foundation
 
-// MARK: - FreeListMoviesModel
-struct FreeListMoviesModel: Codable {
+// MARK: - ListMoviesModel
+struct ListMoviesModel: Codable {
     let data: DataClass?
 }
 

@@ -15,5 +15,10 @@ struct Constants {
             "Content-Type": "application/json"
         ]
         static let apiVersion = "v3"
+        static let queryItems = [
+            URLQueryItem(name: "classification_id", value: "6"),
+            URLQueryItem(name: "device_identifier", value: "ios"),
+            URLQueryItem(name: "market_code", value: "es")
+        ]
     }
 }

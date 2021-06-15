@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-struct ListMovies: Requestable {
+struct ListFreeMovies: Requestable {
     
     var method: HTTPMethod = .get
     var path: String
@@ -16,14 +16,9 @@ struct ListMovies: Requestable {
     private let endpointPath = "lists/free-la-mejor-seleccion-de-peliculas"
     
     init() {
-        let queryItems = [
-            URLQueryItem(name: "classification_id", value: "6"),
-            URLQueryItem(name: "device_identifier", value: "ios"),
-            URLQueryItem(name: "market_code", value: "es")
-        ]
         let baseURL = "\(Constants.API.host)/\(Constants.API.apiVersion)/\(endpointPath)"
         var urlComps = URLComponents(string: baseURL)
-        urlComps?.queryItems = queryItems
+        urlComps?.queryItems = Constants.API.queryItems
         path = urlComps?.url?.absoluteString ?? ""
     }
     

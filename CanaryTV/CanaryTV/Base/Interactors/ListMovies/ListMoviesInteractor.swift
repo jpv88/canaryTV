@@ -9,7 +9,7 @@ import Foundation
 
 class ListMoviesInteractor: OutputInteractor<ListMoviesInteractor.Output> {
     
-    typealias Output = [FreeListMoviesModel]
+    typealias Output = [ListMoviesModel]
     
     private let webService: WebService
     
@@ -19,10 +19,33 @@ class ListMoviesInteractor: OutputInteractor<ListMoviesInteractor.Output> {
     }
     
     override func execute(completion: @escaping (Output) -> Void, errorHandler: @escaping (Error) -> Void) {
-        webService.loadFromWebService(type: FreeListMoviesModel.self, endpoint: .List) { result in
-            completion([result])
+        
+        var moviesList: [ListMoviesModel] = []
+        let group = DispatchGroup()
+        
+        group.enter()
+        webService.loadFromWebService(type: ListMoviesModel.self, endpoint: .FreeMovies) { result in
+            moviesList.append(result)
+            group.leave()
         } errorHandler: { error in
-            errorHandler(error)
+            group.leave()
+        }
+        
+        group.enter()
+        webService.loadFromWebService(type: ListMoviesModel.self, endpoint: .LastMovies) { result in
+            moviesList.append(result)
+            group.leave()
+        } errorHandler: { error in
+            group.leave()
+        }
+
+        group.notify(queue: .main) {
+            // All requests completed
+            if moviesList.isEmpty {
+                errorHandler(MyCustomError.ApiError("Something is wrong in backend"))
+            } else {
+                completion(moviesList)
+            }
         }
 
     }

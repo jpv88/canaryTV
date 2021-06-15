@@ -10,6 +10,7 @@ import Alamofire
 
 enum MyCustomError: Error {
     case NoParsedModel(String)
+    case ApiError(String)
 }
 
 class WebService {

@@ -9,7 +9,12 @@ import Foundation
 import Alamofire
 
 enum Endpoint {
-    case List
+    case FreeMovies
+    case LastMovies
+    case StoriesMovies
+    case ActionMovies
+    case CinemaMovies
+    case ComedyMovies
     case Movie(title: String)
     case Trailer
 }
@@ -23,8 +28,18 @@ protocol Requestable {
 extension Endpoint {
     var getRequest: Requestable {
         switch self {
-        case .List:
-            return ListMovies()
+        case .FreeMovies:
+            return ListFreeMovies()
+        case .LastMovies:
+            return ListLastMovies()
+        case .StoriesMovies:
+            return ListStoriesMovies()
+        case .ActionMovies:
+            return ListActionMovies()
+        case .CinemaMovies:
+            return ListCinemaMovies()
+        case .ComedyMovies:
+            return ListComedyMovies()
         case .Movie(title: let title):
             return GetMovieInfo(title: title)
         case .Trailer:

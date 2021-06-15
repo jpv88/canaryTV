@@ -45,8 +45,8 @@ extension DefaultHomeViewController: HomeViewController {
 
 extension DefaultHomeViewController: ListMoviesActions {
     
-    func someMoviePressed(movie: Datum) {
-        presenter?.someMoviePressed(movie: movie)
+    func someMoviePressed(movieID: String) {
+        presenter?.someMoviePressed(movieID: movieID)
     }
     
     func updateUI() {

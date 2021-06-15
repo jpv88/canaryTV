@@ -54,6 +54,7 @@
 		7FFED4A02678D17900A8D967 /* ListMoviesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFED49E2678D17800A8D967 /* ListMoviesCollectionViewCell.xib */; };
 		7FFED4A22678D1C300A8D967 /* UICollectionViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4A12678D1C300A8D967 /* UICollectionViewCell+Identifier.swift */; };
 		7FFED4A42678D4FE00A8D967 /* UIImageView+LoadURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4A32678D4FE00A8D967 /* UIImageView+LoadURL.swift */; };
+		7FFED4A62678F3F200A8D967 /* MovieDetailInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4A52678F3F100A8D967 /* MovieDetailInfoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		7FFED49E2678D17800A8D967 /* ListMoviesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListMoviesCollectionViewCell.xib; sourceTree = "<group>"; };
 		7FFED4A12678D1C300A8D967 /* UICollectionViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Identifier.swift"; sourceTree = "<group>"; };
 		7FFED4A32678D4FE00A8D967 /* UIImageView+LoadURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadURL.swift"; sourceTree = "<group>"; };
+		7FFED4A52678F3F100A8D967 /* MovieDetailInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInfoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				7FFED44A2673A42A00A8D967 /* ListMoviesModel.swift */,
+				7FFED4A52678F3F100A8D967 /* MovieDetailInfoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				7FFED49C2678964900A8D967 /* ListComedyMovies.swift in Sources */,
 				7FFED4512673A6BB00A8D967 /* GetMovieInfo.swift in Sources */,
 				7FFED4562673AF4500A8D967 /* UIApplication+TopViewController.swift in Sources */,
+				7FFED4A62678F3F200A8D967 /* MovieDetailInfoModel.swift in Sources */,
 				7FFED47726776B4B00A8D967 /* InitializeDependencyInjectionService.swift in Sources */,
 				7FFED49426788F7C00A8D967 /* ListLastMovies.swift in Sources */,
 				7FFED46926775BFE00A8D967 /* DefaultHomePresenter.swift in Sources */,

@@ -28,8 +28,8 @@ class DefaultHomePresenter: HomePresenter {
 
     }
     
-    func someMoviePressed(movie: Datum) {
-        router.showDetailView(movie: movie)
+    func someMoviePressed(movieID: String) {
+        
     }
         
 }

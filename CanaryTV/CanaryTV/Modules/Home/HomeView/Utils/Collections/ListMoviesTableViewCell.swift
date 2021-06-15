@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ListMoviesTableItemPressed {
-    func pressedItem(item: Datum)
+    func pressedItem(itemID: String)
 }
 
 class ListMoviesTableViewCell: UITableViewCell {
@@ -47,8 +47,8 @@ extension ListMoviesTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let dataSource = collectionDataSource else { return }
-        delegate?.pressedItem(item: dataSource[indexPath.row])
+        guard let dataSource = collectionDataSource, let id = dataSource[indexPath.row].id else { return }
+        delegate?.pressedItem(itemID: id)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

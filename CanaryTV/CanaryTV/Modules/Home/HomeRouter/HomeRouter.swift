@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HomeRouter {
-    func showDetailView(movie: Datum)
+    func showDetailView(movieDetail: MovieDetailInfoModel)
 }

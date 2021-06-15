@@ -31,7 +31,7 @@ class DefaultHomePresenter: HomePresenter {
     
     func someMoviePressed(movieID: String) {
         getMovieDetailInfoInteractor.execute(input: movieID) { resul in
-            print("ey")
+            self.router.showDetailView(movieDetail: resul)
         } errorHandler: { error in
             ErrorHandler.showError(error: error)
         }

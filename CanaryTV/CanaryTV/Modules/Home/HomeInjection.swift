@@ -26,9 +26,10 @@ internal extension InitializeDependencyInjectionService {
             guard let view = r.resolve(HomeViewController.self) else {
                 fatalError("Invalid args!")
             }
-            guard let router = r.resolve(HomeRouter.self) else {
+            guard var router = r.resolve(HomeRouter.self) else {
                 fatalError("Invalid args!")
             }
+            router.viewController = view as? BaseViewController
             guard let listMoviesInteractor = r.resolve(ListMoviesInteractor.self) else {
                 fatalError("Invalid args!")
             }

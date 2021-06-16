@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         let injector = InitializeDependencyInjectionService.shared.injector
         guard let homeVC = injector.resolve(HomeViewController.self) as? DefaultHomeViewController else { return }
-        window.rootViewController = homeVC
+        window.rootViewController = UINavigationController(rootViewController: homeVC)
         self.window = window
         window.makeKeyAndVisible()
     }

@@ -7,6 +7,10 @@
 
 import Foundation
 
-protocol HomeRouter {
+protocol RouterBase {
+    var viewController: BaseViewController? { get set }
+}
+
+protocol HomeRouter: RouterBase {
     func showDetailView(movieDetail: MovieDetailInfoModel)
 }

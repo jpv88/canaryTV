@@ -9,6 +9,8 @@ import Foundation
 
 class DefaultHomeRouter: HomeRouter {
     
+    weak var viewController: BaseViewController?
+    
     private let resolver: ResolverInjection!
     
     init(resolver: ResolverInjection) {
@@ -17,8 +19,8 @@ class DefaultHomeRouter: HomeRouter {
     
     func showDetailView(movieDetail: MovieDetailInfoModel) {
         guard let detailViewController = resolver.resolve(DetailViewController.self, argument: movieDetail) as? DefaultDetailViewController else { return }
-        print("EY")
-        
+        guard let from = viewController else { return }
+        from.navigationController?.pushViewController(detailViewController, animated: true)        
     }
     
 }

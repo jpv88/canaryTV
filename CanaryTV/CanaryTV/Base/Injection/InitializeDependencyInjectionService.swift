@@ -33,5 +33,6 @@ class InitializeDependencyInjectionService {
     
     private func registerModules() {
         registerHomeModule()
+        registerDetailModule()
     }
 }

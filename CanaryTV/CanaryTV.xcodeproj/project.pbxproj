@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F3F087D267952FC007834EF /* DetailInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F087C267952FC007834EF /* DetailInjection.swift */; };
+		7F3F08822679535C007834EF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F08812679535C007834EF /* DetailViewController.swift */; };
+		7F3F088426795368007834EF /* DefaultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F088326795368007834EF /* DefaultDetailViewController.swift */; };
+		7F3F08862679538D007834EF /* DefaultDetailViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F08852679538D007834EF /* DefaultDetailViewController+Layout.swift */; };
+		7F3F08882679539C007834EF /* DefaultDetailViewController+BuildComponentes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F08872679539C007834EF /* DefaultDetailViewController+BuildComponentes.swift */; };
+		7F3F088A2679F4AA007834EF /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F08892679F4AA007834EF /* DetailPresenter.swift */; };
+		7F3F088C2679F4BB007834EF /* DefaultDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F088B2679F4BB007834EF /* DefaultDetailPresenter.swift */; };
+		7F3F088E2679FD1D007834EF /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F088D2679FD1D007834EF /* DetailRouter.swift */; };
+		7F3F08902679FD25007834EF /* DefaultDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F088F2679FD25007834EF /* DefaultDetailRouter.swift */; };
 		7FFED40226738A6100A8D967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED40126738A6100A8D967 /* AppDelegate.swift */; };
 		7FFED40426738A6100A8D967 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED40326738A6100A8D967 /* SceneDelegate.swift */; };
 		7FFED40B26738A6800A8D967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FFED40A26738A6800A8D967 /* Assets.xcassets */; };
@@ -77,6 +86,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F3F087C267952FC007834EF /* DetailInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInjection.swift; sourceTree = "<group>"; };
+		7F3F08812679535C007834EF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7F3F088326795368007834EF /* DefaultDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDetailViewController.swift; sourceTree = "<group>"; };
+		7F3F08852679538D007834EF /* DefaultDetailViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultDetailViewController+Layout.swift"; sourceTree = "<group>"; };
+		7F3F08872679539C007834EF /* DefaultDetailViewController+BuildComponentes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultDetailViewController+BuildComponentes.swift"; sourceTree = "<group>"; };
+		7F3F08892679F4AA007834EF /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		7F3F088B2679F4BB007834EF /* DefaultDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDetailPresenter.swift; sourceTree = "<group>"; };
+		7F3F088D2679FD1D007834EF /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		7F3F088F2679FD25007834EF /* DefaultDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDetailRouter.swift; sourceTree = "<group>"; };
 		7FFED3FE26738A6100A8D967 /* CanaryTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanaryTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFED40126738A6100A8D967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FFED40326738A6100A8D967 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +178,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F3F087B26795124007834EF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				7F3F087C267952FC007834EF /* DetailInjection.swift */,
+				7F3F087E26795306007834EF /* DetailPresenter */,
+				7F3F087F2679530D007834EF /* DetailRouter */,
+				7F3F08802679531B007834EF /* DetailView */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		7F3F087E26795306007834EF /* DetailPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				7F3F088B2679F4BB007834EF /* DefaultDetailPresenter.swift */,
+				7F3F08892679F4AA007834EF /* DetailPresenter.swift */,
+			);
+			path = DetailPresenter;
+			sourceTree = "<group>";
+		};
+		7F3F087F2679530D007834EF /* DetailRouter */ = {
+			isa = PBXGroup;
+			children = (
+				7F3F088F2679FD25007834EF /* DefaultDetailRouter.swift */,
+				7F3F088D2679FD1D007834EF /* DetailRouter.swift */,
+			);
+			path = DetailRouter;
+			sourceTree = "<group>";
+		};
+		7F3F08802679531B007834EF /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				7F3F088326795368007834EF /* DefaultDetailViewController.swift */,
+				7F3F08872679539C007834EF /* DefaultDetailViewController+BuildComponentes.swift */,
+				7F3F08852679538D007834EF /* DefaultDetailViewController+Layout.swift */,
+				7F3F08812679535C007834EF /* DetailViewController.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
 		7FFED3F526738A6100A8D967 = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +296,7 @@
 		7FFED433267397FE00A8D967 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7F3F087B26795124007834EF /* Detail */,
 				7FFED434267398D200A8D967 /* Home */,
 			);
 			path = Modules;
@@ -537,6 +596,7 @@
 			files = (
 				7FFED47C26777FDA00A8D967 /* RegisterUtils.swift in Sources */,
 				7FFED46426775B0000A8D967 /* DefaultHomeViewController.swift in Sources */,
+				7F3F08882679539C007834EF /* DefaultDetailViewController+BuildComponentes.swift in Sources */,
 				7FFED46F26775CC700A8D967 /* Colors.swift in Sources */,
 				7FFED47326775FE400A8D967 /* DefaultHomeViewController+BuildComponents.swift in Sources */,
 				7FFED40226738A6100A8D967 /* AppDelegate.swift in Sources */,
@@ -545,8 +605,12 @@
 				7FFED44F2673A65D00A8D967 /* ListFreeMovies.swift in Sources */,
 				7FFED48D2677B43400A8D967 /* Interactors.swift in Sources */,
 				7FFED47126775DFB00A8D967 /* BaseViewController.swift in Sources */,
+				7F3F088A2679F4AA007834EF /* DetailPresenter.swift in Sources */,
 				7FFED4462673A3ED00A8D967 /* WebService.swift in Sources */,
+				7F3F088C2679F4BB007834EF /* DefaultDetailPresenter.swift in Sources */,
+				7F3F08822679535C007834EF /* DetailViewController.swift in Sources */,
 				7FFED498267890FF00A8D967 /* ListActionMovies.swift in Sources */,
+				7F3F08862679538D007834EF /* DefaultDetailViewController+Layout.swift in Sources */,
 				7FFED46D26775C1900A8D967 /* DefaultHomeRouter.swift in Sources */,
 				7FFED40426738A6100A8D967 /* SceneDelegate.swift in Sources */,
 				7FFED46226775AEC00A8D967 /* HomeViewController.swift in Sources */,
@@ -555,7 +619,10 @@
 				7FFED46B26775C0D00A8D967 /* HomeRouter.swift in Sources */,
 				7FFED45A2673B15B00A8D967 /* ErrorHandler.swift in Sources */,
 				7FFED47926776C9900A8D967 /* HomeInjection.swift in Sources */,
+				7F3F088E2679FD1D007834EF /* DetailRouter.swift in Sources */,
 				7FFED4472673A3ED00A8D967 /* Endpoint.swift in Sources */,
+				7F3F08902679FD25007834EF /* DefaultDetailRouter.swift in Sources */,
+				7F3F088426795368007834EF /* DefaultDetailViewController.swift in Sources */,
 				7FFED4532673A6D000A8D967 /* GetTrailerURL.swift in Sources */,
 				7FFED48F2677B44600A8D967 /* ListMoviesInteractor.swift in Sources */,
 				7FFED49A267895DF00A8D967 /* ListCinemaMovies.swift in Sources */,
@@ -576,6 +643,7 @@
 				7FFED44B2673A42A00A8D967 /* ListMoviesModel.swift in Sources */,
 				7FFED4922677B98200A8D967 /* ListMoviesInteractorInjector.swift in Sources */,
 				7FFED44D2673A4FE00A8D967 /* Constants.swift in Sources */,
+				7F3F087D267952FC007834EF /* DetailInjection.swift in Sources */,
 				7FFED46726775BF100A8D967 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

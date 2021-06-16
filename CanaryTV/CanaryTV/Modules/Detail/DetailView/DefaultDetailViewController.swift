@@ -13,7 +13,10 @@ class DefaultDetailViewController: BaseViewController {
     internal var scrollView: UIScrollView!
     internal var contentView: UIView!
     internal var imageTitle: UIImageView!
-    
+    internal var ratingLabel: UILabel!
+    internal var yearLabel: UILabel!
+    internal var durationLabel: UILabel!
+    internal var detailElements: UIStackView!
     internal var titleLabel: UILabel!
     internal var descriptionLabel: UILabel!
     
@@ -43,10 +46,13 @@ class DefaultDetailViewController: BaseViewController {
 
 extension DefaultDetailViewController: DetailViewController {
     
-    func showThisInfo(image: URL, title: String, description: String) {
+    func showThisInfo(image: URL, title: String, description: String, rating: String, year: String, duration: String) {
         imageTitle.load(url: image)
         titleLabel.text = title
         descriptionLabel.text = description
+        ratingLabel.text = rating
+        yearLabel.text = year
+        durationLabel.text = duration
     }
     
 }

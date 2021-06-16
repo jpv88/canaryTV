@@ -23,8 +23,10 @@ class DefaultDetailPresenter: DetailPresenter {
         guard let image = dataModel.data?.images?.artwork, let imageURL = URL(string: image) else { return }
         let title = dataModel.data?.originalTitle ?? ""
         let description = dataModel.data?.plot ?? ""
-    
-        view.showThisInfo(image: imageURL, title: title, description: description)
+        let rating = "★ \(dataModel.data?.rating?.average?.description ?? "")"
+        let year = dataModel.data?.year?.description ?? ""
+        let duration = "\(dataModel.data?.duration?.description ?? "")m"
+        view.showThisInfo(image: imageURL, title: title, description: description, rating: rating, year: year, duration: duration)
     }
     
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DetailViewController {
-    func showThisInfo(image: URL, title: String, description: String)
+    func showThisInfo(image: URL, title: String, description: String, rating: String, year: String, duration: String)
 }

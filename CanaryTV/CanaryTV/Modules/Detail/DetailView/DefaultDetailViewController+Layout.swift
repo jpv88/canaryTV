@@ -45,14 +45,20 @@ internal extension DefaultDetailViewController {
     }
     
     private func layoutHorizontalElements() {
+        contentView.addSubview(detailElements)
         
+        detailElements.translatesAutoresizingMaskIntoConstraints = false
+        detailElements.topAnchor.constraint(equalTo: imageTitle.bottomAnchor, constant: Constant.elementsSeparator).isActive = true
+        detailElements.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constant.margin).isActive = true
+        detailElements.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constant.margin).isActive = true
+        detailElements.heightAnchor.constraint(equalToConstant: 15).isActive = true
     }
     
     private func layoutTitleLabel() {
         contentView.addSubview(titleLabel)
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: imageTitle.bottomAnchor, constant: Constant.elementsSeparator).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: detailElements.bottomAnchor, constant: Constant.elementsSeparator).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constant.margin).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constant.margin).isActive = true
     }

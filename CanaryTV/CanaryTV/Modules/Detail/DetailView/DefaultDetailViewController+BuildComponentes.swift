@@ -14,6 +14,10 @@ internal extension DefaultDetailViewController {
         buildScrollView()
         buildContentView()
         buildTitleImageView()
+        buildRatingLabel()
+        buildYearLabel()
+        buildDurationLabel()
+        buildStackHorizontalElements()
         buildTitleLabel()
         buildDescriptionLabel()
     }
@@ -34,6 +38,45 @@ internal extension DefaultDetailViewController {
         let component = UIImageView()
         component.contentMode = .scaleAspectFit
         imageTitle = component
+    }
+    
+    private func buildRatingLabel() {
+        let component = UILabel()
+        component.backgroundColor = .clear
+        component.textColor = Colors.yellow
+        component.font = UIFont.Verdana(.regular, size: 12)
+        component.textAlignment = .center
+        ratingLabel = component
+    }
+    
+    private func buildYearLabel() {
+        let component = UILabel()
+        component.backgroundColor = .clear
+        component.textColor = Colors.secondary
+        component.font = UIFont.Verdana(.regular, size: 12)
+        component.textAlignment = .center
+        yearLabel = component
+    }
+    
+    private func buildDurationLabel() {
+        let component = UILabel()
+        component.backgroundColor = .clear
+        component.textColor = Colors.secondary
+        component.font = UIFont.Verdana(.regular, size: 12)
+        component.textAlignment = .center
+        durationLabel = component
+    }
+    
+    private func buildStackHorizontalElements() {
+        let component = UIStackView()
+        component.axis = .horizontal
+        component.distribution = .fillEqually
+        component.alignment = .center
+        component.spacing = 10
+        component.addArrangedSubview(ratingLabel)
+        component.addArrangedSubview(yearLabel)
+        component.addArrangedSubview(durationLabel)
+        detailElements = component
     }
     
     private func buildTitleLabel() {

@@ -14,6 +14,8 @@ internal extension DefaultDetailViewController {
         buildScrollView()
         buildContentView()
         buildTitleImageView()
+        buildTitleLabel()
+        buildDescriptionLabel()
     }
     
     private func buildScrollView() {
@@ -32,6 +34,24 @@ internal extension DefaultDetailViewController {
         let component = UIImageView()
         component.contentMode = .scaleAspectFit
         imageTitle = component
+    }
+    
+    private func buildTitleLabel() {
+        let component = UILabel()
+        component.backgroundColor = .clear
+        component.textColor = Colors.secondary
+        component.font = UIFont.Verdana(.bold, size: 24)        
+        component.numberOfLines = 0
+        titleLabel = component
+    }
+    
+    private func buildDescriptionLabel() {
+        let component = UILabel()
+        component.backgroundColor = .clear
+        component.textColor = Colors.secondary
+        component.font = UIFont.Verdana(.regular, size: 16)
+        component.numberOfLines = 0
+        descriptionLabel = component
     }
     
 }

@@ -14,6 +14,9 @@ internal extension DefaultDetailViewController {
     func layoutView() {
         layoutScrollView()
         layoutTitleImageView()
+        layoutHorizontalElements()
+        layoutTitleLabel()
+        layoutDescriptionLabel()
     }
     
     private func layoutScrollView() {
@@ -42,4 +45,27 @@ internal extension DefaultDetailViewController {
         imageTitle.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         imageTitle.heightAnchor.constraint(equalToConstant: Constant.imageTitleHeight).isActive = true
     }
+    
+    private func layoutHorizontalElements() {
+        
+    }
+    
+    private func layoutTitleLabel() {
+        contentView.addSubview(titleLabel)
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.topAnchor.constraint(equalTo: imageTitle.bottomAnchor, constant: Constant.elementsSeparator).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constant.margin).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: Constant.margin).isActive = true
+    }
+    
+    private func layoutDescriptionLabel() {
+        contentView.addSubview(descriptionLabel)
+        
+        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constant.elementsSeparator).isActive = true
+        descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constant.margin).isActive = true
+        descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: Constant.margin).isActive = true
+    }
+    
 }

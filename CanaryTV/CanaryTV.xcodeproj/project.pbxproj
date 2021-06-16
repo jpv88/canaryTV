@@ -16,6 +16,7 @@
 		7F3F088C2679F4BB007834EF /* DefaultDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F088B2679F4BB007834EF /* DefaultDetailPresenter.swift */; };
 		7F3F088E2679FD1D007834EF /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F088D2679FD1D007834EF /* DetailRouter.swift */; };
 		7F3F08902679FD25007834EF /* DefaultDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F088F2679FD25007834EF /* DefaultDetailRouter.swift */; };
+		7F3F0892267A3673007834EF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F0891267A3673007834EF /* Fonts.swift */; };
 		7FFED40226738A6100A8D967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED40126738A6100A8D967 /* AppDelegate.swift */; };
 		7FFED40426738A6100A8D967 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED40326738A6100A8D967 /* SceneDelegate.swift */; };
 		7FFED40B26738A6800A8D967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FFED40A26738A6800A8D967 /* Assets.xcassets */; };
@@ -95,6 +96,7 @@
 		7F3F088B2679F4BB007834EF /* DefaultDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDetailPresenter.swift; sourceTree = "<group>"; };
 		7F3F088D2679FD1D007834EF /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		7F3F088F2679FD25007834EF /* DefaultDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDetailRouter.swift; sourceTree = "<group>"; };
+		7F3F0891267A3673007834EF /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		7FFED3FE26738A6100A8D967 /* CanaryTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanaryTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFED40126738A6100A8D967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FFED40326738A6100A8D967 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				7FFED46E26775CC700A8D967 /* Colors.swift */,
 				7FFED44C2673A4FE00A8D967 /* Constants.swift */,
 				7FFED4592673B15B00A8D967 /* ErrorHandler.swift */,
+				7F3F0891267A3673007834EF /* Fonts.swift */,
 				7FFED4542673AF3400A8D967 /* Utils */,
 			);
 			path = Commons;
@@ -622,6 +625,7 @@
 				7F3F088E2679FD1D007834EF /* DetailRouter.swift in Sources */,
 				7FFED4472673A3ED00A8D967 /* Endpoint.swift in Sources */,
 				7F3F08902679FD25007834EF /* DefaultDetailRouter.swift in Sources */,
+				7F3F0892267A3673007834EF /* Fonts.swift in Sources */,
 				7F3F088426795368007834EF /* DefaultDetailViewController.swift in Sources */,
 				7FFED4532673A6D000A8D967 /* GetTrailerURL.swift in Sources */,
 				7FFED48F2677B44600A8D967 /* ListMoviesInteractor.swift in Sources */,

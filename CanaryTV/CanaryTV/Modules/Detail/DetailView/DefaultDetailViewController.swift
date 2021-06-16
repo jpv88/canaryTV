@@ -14,10 +14,14 @@ class DefaultDetailViewController: BaseViewController {
     internal var contentView: UIView!
     internal var imageTitle: UIImageView!
     
+    internal var titleLabel: UILabel!
+    internal var descriptionLabel: UILabel!
+    
     internal enum Constant {
         static let title = "Detail"
         static let imageTitleHeight: CGFloat = 320
         static let elementsSeparator: CGFloat = 25
+        static let margin: CGFloat = 16
     }
     
     override func viewDidLoad() {
@@ -41,6 +45,8 @@ extension DefaultDetailViewController: DetailViewController {
     
     func showThisInfo(image: URL, title: String, description: String) {
         imageTitle.load(url: image)
+        titleLabel.text = title
+        descriptionLabel.text = description
     }
     
 }

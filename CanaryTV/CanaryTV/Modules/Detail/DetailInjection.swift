@@ -26,10 +26,14 @@ internal extension InitializeDependencyInjectionService {
             guard let router = r.resolve(DetailRouter.self) else {
                 fatalError("Invalid args!")
             }
+            guard let trailerMovieInteractor = r.resolve(GetMovieTrailerURLInteractor.self) else {
+                fatalError("Invalid args!")
+            }
             let presenter = DefaultDetailPresenter(
                 view: view,
                 router: router,
-                dataModel: data
+                dataModel: data,
+                trailerMovieInteractor: trailerMovieInteractor
             )
             return presenter
         }

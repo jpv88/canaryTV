@@ -12,11 +12,13 @@ class DefaultDetailPresenter: DetailPresenter {
     private var view: DetailViewController
     private let router: DetailRouter
     private var dataModel: MovieDetailInfoModel
+    private let trailerMovieInteractor: GetMovieTrailerURLInteractor
     
-    init(view: DetailViewController, router: DetailRouter, dataModel: MovieDetailInfoModel) {
+    init(view: DetailViewController, router: DetailRouter, dataModel: MovieDetailInfoModel, trailerMovieInteractor: GetMovieTrailerURLInteractor) {
         self.view = view
         self.router = router
         self.dataModel = dataModel
+        self.trailerMovieInteractor = trailerMovieInteractor
     }
     
     func onViewDidLoad() {
@@ -30,7 +32,13 @@ class DefaultDetailPresenter: DetailPresenter {
     }
 
     func showTrailer() {
-        
+        guard let id = dataModel.data?.id else { return }
+        trailerMovieInteractor.execute(input: id) { result in
+            print("result")
+        } errorHandler: { error in
+            ErrorHandler.showError(error: error)
+        }
+
     }
     
 }

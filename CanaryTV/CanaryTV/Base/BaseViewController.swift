@@ -17,7 +17,7 @@ class BaseViewController: UIViewController {
     
     func buildComponents() {
         view.backgroundColor = Colors.main
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = false
 
          let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = Colors.tertiary

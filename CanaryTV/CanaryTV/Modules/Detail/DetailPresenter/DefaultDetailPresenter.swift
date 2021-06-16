@@ -20,7 +20,11 @@ class DefaultDetailPresenter: DetailPresenter {
     }
     
     func onViewDidLoad() {
-        
+        guard let image = dataModel.data?.images?.artwork, let imageURL = URL(string: image) else { return }
+        let title = dataModel.data?.originalTitle ?? ""
+        let description = dataModel.data?.plot ?? ""
+    
+        view.showThisInfo(image: imageURL, title: title, description: description)
     }
     
 }

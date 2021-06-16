@@ -22,10 +22,10 @@ internal extension DefaultDetailViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         
-        scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        scrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        scrollView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        scrollView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor).isActive = true
+        scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
         contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
         contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
@@ -37,9 +37,9 @@ internal extension DefaultDetailViewController {
         contentView.addSubview(imageTitle)
         
         imageTitle.translatesAutoresizingMaskIntoConstraints = false
-        imageTitle.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        imageTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        imageTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        imageTitle.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constant.elementsSeparator).isActive = true
+        imageTitle.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        imageTitle.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         imageTitle.heightAnchor.constraint(equalToConstant: Constant.imageTitleHeight).isActive = true
     }
 }

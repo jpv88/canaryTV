@@ -16,13 +16,14 @@ class DefaultDetailViewController: BaseViewController {
     
     internal enum Constant {
         static let title = "Detail"
-        static let imageTitleHeight: CGFloat = 250
+        static let imageTitleHeight: CGFloat = 320
+        static let elementsSeparator: CGFloat = 25
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //presenter?.onViewDidLoad()
+        presenter?.onViewDidLoad()
     }
     
     override func buildComponents() {
@@ -39,7 +40,7 @@ class DefaultDetailViewController: BaseViewController {
 extension DefaultDetailViewController: DetailViewController {
     
     func showThisInfo(image: URL, title: String, description: String) {
-        
+        imageTitle.load(url: image)
     }
     
 }

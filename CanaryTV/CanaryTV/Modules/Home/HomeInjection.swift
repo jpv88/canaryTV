@@ -23,11 +23,23 @@ internal extension InitializeDependencyInjectionService {
     
     private func registerPresenter() {
         injector.register(HomePresenter.self) { r in
+            guard let view = r.resolve(HomeViewController.self) else {
+                fatalError("Invalid args!")
+            }
+            guard let router = r.resolve(HomeRouter.self) else {
+                fatalError("Invalid args!")
+            }
+            guard let listMoviesInteractor = r.resolve(ListMoviesInteractor.self) else {
+                fatalError("Invalid args!")
+            }
+            guard let getMovieDetailInfoInteractor = r.resolve(GetMovieDetailInteractor.self) else {
+                fatalError("Invalid args!")
+            }
             let presenter = DefaultHomePresenter(
-                view: r.resolve(HomeViewController.self)!,
-                router: r.resolve(HomeRouter.self)!,
-                listMoviesInteractor: r.resolve(ListMoviesInteractor.self)!,
-                getMovieDetailInfoInteractor: r.resolve(GetMovieDetailInteractor.self)!
+                view: view,
+                router: router,
+                listMoviesInteractor: listMoviesInteractor,
+                getMovieDetailInfoInteractor: getMovieDetailInfoInteractor
             )
             return presenter
         }

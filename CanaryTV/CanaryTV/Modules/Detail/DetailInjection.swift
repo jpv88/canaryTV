@@ -23,9 +23,12 @@ internal extension InitializeDependencyInjectionService {
     
     private func registerPresenter() {
         injector.register(DetailPresenter.self) { (r: ResolverInjection, data: MovieDetailInfoModel, view: DetailViewController) in
+            guard let router = r.resolve(DetailRouter.self) else {
+                fatalError("Invalid args!")
+            }
             let presenter = DefaultDetailPresenter(
                 view: view,
-                router: r.resolve(DetailRouter.self)!,
+                router: router,
                 dataModel: data
             )
             return presenter

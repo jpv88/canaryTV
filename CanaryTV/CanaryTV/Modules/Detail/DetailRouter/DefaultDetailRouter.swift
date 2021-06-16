@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import AVKit
+import AVFoundation
 
 class DefaultDetailRouter: DetailRouter {
+    
+    var viewController: BaseViewController?
     
     private let resolver: ResolverInjection!
     
@@ -15,8 +19,11 @@ class DefaultDetailRouter: DetailRouter {
         self.resolver = resolver
     }
     
-    func showTrailerScreen() {
-        
+    func showTrailerScreen(with player: PlayerViewController) {
+        guard let from = viewController else { return }
+        from.navigationController?.present(player, animated: true, completion: {
+            player.player?.play()
+        })
     }
         
 }

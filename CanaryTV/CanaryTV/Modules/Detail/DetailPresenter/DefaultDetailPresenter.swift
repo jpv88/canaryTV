@@ -34,11 +34,17 @@ class DefaultDetailPresenter: DetailPresenter {
     func showTrailer() {
         guard let id = dataModel.data?.id else { return }
         trailerMovieInteractor.execute(input: id) { result in
-            print("result")
+            self.playVideo(url: result)
         } errorHandler: { error in
             ErrorHandler.showError(error: error)
         }
-
+    }
+    
+    private func playVideo(url: URL) {
+        let player = Player(url: url)
+        let vc = PlayerViewController()
+        vc.player = player
+        router.showTrailerScreen(with: vc)
     }
     
 }

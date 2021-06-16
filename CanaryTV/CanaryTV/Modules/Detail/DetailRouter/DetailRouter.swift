@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol DetailRouter {
-    func showTrailerScreen()
+protocol DetailRouter: RouterBase {
+    func showTrailerScreen(with player: PlayerViewController)
 }

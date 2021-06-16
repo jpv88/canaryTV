@@ -23,9 +23,10 @@ internal extension InitializeDependencyInjectionService {
     
     private func registerPresenter() {
         injector.register(DetailPresenter.self) { (r: ResolverInjection, data: MovieDetailInfoModel, view: DetailViewController) in
-            guard let router = r.resolve(DetailRouter.self) else {
+            guard var router = r.resolve(DetailRouter.self) else {
                 fatalError("Invalid args!")
             }
+            router.viewController = view as? BaseViewController
             guard let trailerMovieInteractor = r.resolve(GetMovieTrailerURLInteractor.self) else {
                 fatalError("Invalid args!")
             }

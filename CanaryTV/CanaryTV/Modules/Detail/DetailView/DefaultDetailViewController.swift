@@ -13,6 +13,7 @@ class DefaultDetailViewController: BaseViewController {
     internal var scrollView: UIScrollView!
     internal var contentView: UIView!
     internal var imageTitle: UIImageView!
+    internal var trailerButton: UIButton!
     internal var ratingLabel: UILabel!
     internal var yearLabel: UILabel!
     internal var durationLabel: UILabel!
@@ -22,6 +23,7 @@ class DefaultDetailViewController: BaseViewController {
     
     internal enum Constant {
         static let title = "Detail"
+        static let trailerButton = "Trailer"
         static let imageTitleHeight: CGFloat = 320
         static let elementsSeparator: CGFloat = 25
         static let margin: CGFloat = 16
@@ -41,6 +43,10 @@ class DefaultDetailViewController: BaseViewController {
     override func setUpLayout() {
         super.setUpLayout()
         layoutView()
+    }
+    
+    @objc func trailerButtonTapped(sender : UIButton) {
+        presenter?.showTrailer()
     }
 }
 

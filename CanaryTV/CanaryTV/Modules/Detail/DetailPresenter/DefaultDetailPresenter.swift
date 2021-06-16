@@ -28,5 +28,10 @@ class DefaultDetailPresenter: DetailPresenter {
         let duration = "\(dataModel.data?.duration?.description ?? "")m"
         view.showThisInfo(image: imageURL, title: title, description: description, rating: rating, year: year, duration: duration)
     }
+
+    func showTrailer() {
+        
+    }
     
 }
+

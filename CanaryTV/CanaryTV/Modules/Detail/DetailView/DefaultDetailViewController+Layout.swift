@@ -14,6 +14,7 @@ internal extension DefaultDetailViewController {
     func layoutView() {
         layoutScrollView()
         layoutTitleImageView()
+        layoutTrailerButton()
         layoutHorizontalElements()
         layoutTitleLabel()
         layoutDescriptionLabel()
@@ -44,11 +45,21 @@ internal extension DefaultDetailViewController {
         imageTitle.heightAnchor.constraint(equalToConstant: Constant.imageTitleHeight).isActive = true
     }
     
+    private func layoutTrailerButton() {
+        contentView.addSubview(trailerButton)
+        
+        trailerButton.translatesAutoresizingMaskIntoConstraints = false
+        trailerButton.topAnchor.constraint(equalTo: imageTitle.bottomAnchor, constant: Constant.elementsSeparator).isActive = true
+        trailerButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        trailerButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        trailerButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
+    }
+    
     private func layoutHorizontalElements() {
         contentView.addSubview(detailElements)
         
         detailElements.translatesAutoresizingMaskIntoConstraints = false
-        detailElements.topAnchor.constraint(equalTo: imageTitle.bottomAnchor, constant: Constant.elementsSeparator).isActive = true
+        detailElements.topAnchor.constraint(equalTo: trailerButton.bottomAnchor, constant: Constant.elementsSeparator).isActive = true
         detailElements.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constant.margin).isActive = true
         detailElements.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constant.margin).isActive = true
         detailElements.heightAnchor.constraint(equalToConstant: 15).isActive = true

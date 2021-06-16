@@ -14,6 +14,7 @@ internal extension DefaultDetailViewController {
         buildScrollView()
         buildContentView()
         buildTitleImageView()
+        buildTrailerButton()
         buildRatingLabel()
         buildYearLabel()
         buildDurationLabel()
@@ -38,6 +39,18 @@ internal extension DefaultDetailViewController {
         let component = UIImageView()
         component.contentMode = .scaleAspectFit
         imageTitle = component
+    }
+    
+    private func buildTrailerButton() {
+        let component = UIButton()
+        component.backgroundColor = .clear
+        component.layer.cornerRadius = 5
+        component.layer.borderWidth = 1
+        component.layer.borderColor = Colors.secondary.cgColor
+        component.setTitle(Constant.trailerButton, for: .normal)
+        component.setTitleColor(Colors.secondary, for: .normal)
+        component.addTarget(self, action: #selector(self.trailerButtonTapped), for: .touchUpInside)
+        trailerButton = component
     }
     
     private func buildRatingLabel() {

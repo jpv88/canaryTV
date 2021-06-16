@@ -29,6 +29,7 @@ class InitializeDependencyInjectionService {
     private func registerInteractors() {
         registerListMoviesInteractorInjector()
         registerGetMovieDetailInfoInteractorInjector()
+        registerGetMovieTrailerURLInteractorInjector()
     }
     
     private func registerModules() {

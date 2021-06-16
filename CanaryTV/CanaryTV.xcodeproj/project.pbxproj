@@ -18,6 +18,8 @@
 		7F3F08902679FD25007834EF /* DefaultDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F088F2679FD25007834EF /* DefaultDetailRouter.swift */; };
 		7F3F0892267A3673007834EF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F0891267A3673007834EF /* Fonts.swift */; };
 		7F3F0894267A5964007834EF /* MovieTrailerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F0893267A5964007834EF /* MovieTrailerModel.swift */; };
+		7F3F0897267A5BE0007834EF /* GetMovieTrailerURLInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F0896267A5BE0007834EF /* GetMovieTrailerURLInteractor.swift */; };
+		7F3F0899267A5BEB007834EF /* GetMovieTrailerURLInteractorInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F0898267A5BEB007834EF /* GetMovieTrailerURLInteractorInjector.swift */; };
 		7FFED40226738A6100A8D967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED40126738A6100A8D967 /* AppDelegate.swift */; };
 		7FFED40426738A6100A8D967 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED40326738A6100A8D967 /* SceneDelegate.swift */; };
 		7FFED40B26738A6800A8D967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FFED40A26738A6800A8D967 /* Assets.xcassets */; };
@@ -99,6 +101,8 @@
 		7F3F088F2679FD25007834EF /* DefaultDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDetailRouter.swift; sourceTree = "<group>"; };
 		7F3F0891267A3673007834EF /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		7F3F0893267A5964007834EF /* MovieTrailerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTrailerModel.swift; sourceTree = "<group>"; };
+		7F3F0896267A5BE0007834EF /* GetMovieTrailerURLInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieTrailerURLInteractor.swift; sourceTree = "<group>"; };
+		7F3F0898267A5BEB007834EF /* GetMovieTrailerURLInteractorInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieTrailerURLInteractorInjector.swift; sourceTree = "<group>"; };
 		7FFED3FE26738A6100A8D967 /* CanaryTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanaryTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFED40126738A6100A8D967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FFED40326738A6100A8D967 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +224,15 @@
 				7F3F08812679535C007834EF /* DetailViewController.swift */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		7F3F0895267A5BB2007834EF /* MovieTrailer */ = {
+			isa = PBXGroup;
+			children = (
+				7F3F0896267A5BE0007834EF /* GetMovieTrailerURLInteractor.swift */,
+				7F3F0898267A5BEB007834EF /* GetMovieTrailerURLInteractorInjector.swift */,
+			);
+			path = MovieTrailer;
 			sourceTree = "<group>";
 		};
 		7FFED3F526738A6100A8D967 = {
@@ -439,6 +452,7 @@
 				7FFED48C2677B43400A8D967 /* Interactors.swift */,
 				7FFED4902677B96A00A8D967 /* ListMovies */,
 				7FFED4A72678F86000A8D967 /* MovieDetail */,
+				7F3F0895267A5BB2007834EF /* MovieTrailer */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -624,7 +638,9 @@
 				7FFED4862677AA9C00A8D967 /* UITableViewCell+Identifier.swift in Sources */,
 				7FFED4A42678D4FE00A8D967 /* UIImageView+LoadURL.swift in Sources */,
 				7FFED46B26775C0D00A8D967 /* HomeRouter.swift in Sources */,
+				7F3F0897267A5BE0007834EF /* GetMovieTrailerURLInteractor.swift in Sources */,
 				7FFED45A2673B15B00A8D967 /* ErrorHandler.swift in Sources */,
+				7F3F0899267A5BEB007834EF /* GetMovieTrailerURLInteractorInjector.swift in Sources */,
 				7FFED47926776C9900A8D967 /* HomeInjection.swift in Sources */,
 				7F3F088E2679FD1D007834EF /* DetailRouter.swift in Sources */,
 				7FFED4472673A3ED00A8D967 /* Endpoint.swift in Sources */,

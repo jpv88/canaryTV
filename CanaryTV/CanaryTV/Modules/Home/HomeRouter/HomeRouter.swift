@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RouterBase {
-    var viewController: BaseViewController? { get set }
+    var viewController: BaseViewController { get set }
 }
 
 protocol HomeRouter: RouterBase {

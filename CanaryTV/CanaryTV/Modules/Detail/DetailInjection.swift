@@ -16,22 +16,23 @@ internal extension InitializeDependencyInjectionService {
     }
         
     private func registerRouter() {
-        injector.register(DetailRouter.self) { r in
-            DefaultDetailRouter(resolver: r)
+        injector.register(DetailRouter.self) { (r: ResolverInjection, view: BaseViewController) in
+            DefaultDetailRouter(resolver: r, viewController: view)
         }
     }
     
     private func registerPresenter() {
-        injector.register(DetailPresenter.self) { (r: ResolverInjection, data: MovieDetailInfoModel, view: DetailViewController) in
-            guard var router = r.resolve(DetailRouter.self) else {
+        injector.register(DetailPresenter.self) { (r: ResolverInjection, data: MovieDetailInfoModel, view: DefaultDetailViewController) in
+            let detailView = view as DetailViewController
+            let baseVC = view as BaseViewController
+            guard let router = r.resolve(DetailRouter.self, argument: baseVC) else {
                 fatalError("Invalid args!")
             }
-            router.viewController = view as? BaseViewController
             guard let trailerMovieInteractor = r.resolve(GetMovieTrailerURLInteractor.self) else {
                 fatalError("Invalid args!")
             }
             let presenter = DefaultDetailPresenter(
-                view: view,
+                view: detailView,
                 router: router,
                 dataModel: data,
                 trailerMovieInteractor: trailerMovieInteractor
@@ -43,8 +44,7 @@ internal extension InitializeDependencyInjectionService {
     private func registerViewController() {
         injector.register(DetailViewController.self) { (r: ResolverInjection, data: MovieDetailInfoModel) in
             let viewController = DefaultDetailViewController()
-            let detailView = viewController as DetailViewController
-            let presenter = r.resolve(DetailPresenter.self, arguments: data, detailView)
+            let presenter = r.resolve(DetailPresenter.self, arguments: data, viewController)
             viewController.presenter = presenter
             return viewController
         }

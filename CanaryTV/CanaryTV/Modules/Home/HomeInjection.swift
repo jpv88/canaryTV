@@ -16,20 +16,18 @@ internal extension InitializeDependencyInjectionService {
     }
         
     private func registerRouter() {
-        injector.register(HomeRouter.self) { r in            
-            DefaultHomeRouter(resolver: r)
+        injector.register(HomeRouter.self) { (r: ResolverInjection, view: BaseViewController) in
+            DefaultHomeRouter(resolver: r, viewController: view)
         }
     }
     
     private func registerPresenter() {
-        injector.register(HomePresenter.self) { r in
-            guard let view = r.resolve(HomeViewController.self) else {
+        injector.register(HomePresenter.self) { (r: ResolverInjection, view: DefaultHomeViewController) in
+            let homeView = view as HomeViewController
+            let baseVC = view as BaseViewController
+            guard let router = r.resolve(HomeRouter.self, argument: baseVC) else {
                 fatalError("Invalid args!")
             }
-            guard var router = r.resolve(HomeRouter.self) else {
-                fatalError("Invalid args!")
-            }
-            router.viewController = view as? BaseViewController
             guard let listMoviesInteractor = r.resolve(ListMoviesInteractor.self) else {
                 fatalError("Invalid args!")
             }
@@ -37,7 +35,7 @@ internal extension InitializeDependencyInjectionService {
                 fatalError("Invalid args!")
             }
             let presenter = DefaultHomePresenter(
-                view: view,
+                view: homeView,
                 router: router,
                 listMoviesInteractor: listMoviesInteractor,
                 getMovieDetailInfoInteractor: getMovieDetailInfoInteractor
@@ -52,11 +50,10 @@ internal extension InitializeDependencyInjectionService {
             let tableManager = r.resolve(ListMoviesTableManager.self)
             tableManager?.delegate = viewController
             viewController.tableManager = tableManager
+            let presenter = r.resolve(HomePresenter.self, argument: viewController)
+            viewController.presenter = presenter
             return viewController
         }
-        .initCompleted { r, homeViewController in
-            guard let vc = homeViewController as? DefaultHomeViewController else { return }
-            vc.presenter = r.resolve(HomePresenter.self)
-        }
     }
+    
 }

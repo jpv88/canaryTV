@@ -41,10 +41,7 @@ class DefaultDetailPresenter: DetailPresenter {
     }
     
     private func playVideo(url: URL) {
-        let player = Player(url: url)
-        let vc = PlayerViewController()
-        vc.player = player
-        router.showTrailerScreen(with: vc)
+        router.showTrailerScreen(with: url)
     }
     
 }

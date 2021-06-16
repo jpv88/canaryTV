@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DetailRouter: RouterBase {
-    func showTrailerScreen(with player: PlayerViewController)
+    func showTrailerScreen(with url: URL)
 }

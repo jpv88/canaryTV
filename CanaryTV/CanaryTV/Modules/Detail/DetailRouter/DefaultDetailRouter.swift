@@ -20,9 +20,10 @@ class DefaultDetailRouter: DetailRouter {
         self.viewController = viewController
     }
     
-    func showTrailerScreen(with player: PlayerViewController) {
-        viewController.navigationController?.present(player, animated: true, completion: {
-            player.player?.play()
+    func showTrailerScreen(with url: URL) {
+        guard let playerViewController = resolver.resolve(PlayerViewController.self, argument: url) else { return }
+        viewController.navigationController?.present(playerViewController, animated: true, completion: {
+            playerViewController.player?.play()
         })
     }
         

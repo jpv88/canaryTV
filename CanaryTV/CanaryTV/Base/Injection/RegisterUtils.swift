@@ -12,6 +12,8 @@ internal extension InitializeDependencyInjectionService {
     func registerUtils() {
         registerWebService()
         registerListMoviesTableManager()
+        registerPlayer()
+        registerPlayerViewController()
     }
     
     private func registerWebService() {
@@ -25,4 +27,20 @@ internal extension InitializeDependencyInjectionService {
             ListMoviesTableManager()
         }
     }
+    
+    private func registerPlayer() {
+        injector.register(Player.self) { (r: ResolverInjection, url: URL) in
+            Player(url: url)
+        }
+    }
+    
+    private func registerPlayerViewController() {
+        injector.register(PlayerViewController.self) { (r: ResolverInjection, url: URL) in
+            let playerViewController = PlayerViewController()
+            let player = r.resolve(Player.self, argument: url)
+            playerViewController.player = player
+            return playerViewController
+        }
+    }
+    
 }

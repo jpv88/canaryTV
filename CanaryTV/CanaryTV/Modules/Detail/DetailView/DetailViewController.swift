@@ -5,8 +5,8 @@
 //  Created by Jared Perez Vega on 15/6/21.
 //
 
-import Foundation
+import UIKit
 
-protocol DetailViewController {
+protocol DetailViewController where Self: UIViewController {
     func showThisInfo(image: URL, title: String, description: String, rating: String, year: String, duration: String)
 }

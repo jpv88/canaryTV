@@ -9,7 +9,7 @@ import Foundation
 
 class DefaultDetailPresenter: DetailPresenter {
     
-    private var view: DetailViewController
+    private weak var view: DetailViewController?
     private let router: DetailRouter
     private var dataModel: MovieDetailInfoModel
     private let trailerMovieInteractor: GetMovieTrailerURLInteractor
@@ -28,7 +28,7 @@ class DefaultDetailPresenter: DetailPresenter {
         let rating = "★ \(dataModel.data?.rating?.average?.description ?? "")"
         let year = dataModel.data?.year?.description ?? ""
         let duration = "\(dataModel.data?.duration?.description ?? "")m"
-        view.showThisInfo(image: imageURL, title: title, description: description, rating: rating, year: year, duration: duration)
+        view?.showThisInfo(image: imageURL, title: title, description: description, rating: rating, year: year, duration: duration)
     }
 
     func showTrailer() {

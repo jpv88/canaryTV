@@ -5,8 +5,8 @@
 //  Created by Jared Perez Vega on 14/6/21.
 //
 
-import Foundation
+import UIKit
 
-protocol HomeViewController {
+protocol HomeViewController where Self: UIViewController {
     func showLoadedInfo(input: [ListMoviesModel])
 }

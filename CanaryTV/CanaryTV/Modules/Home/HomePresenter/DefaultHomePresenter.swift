@@ -9,7 +9,7 @@ import Foundation
 
 class DefaultHomePresenter: HomePresenter {
     
-    private var view: HomeViewController
+    private weak var view: HomeViewController?
     private let router: HomeRouter
     private let listMoviesInteractor: ListMoviesInteractor
     private let getMovieDetailInfoInteractor: GetMovieDetailInteractor
@@ -23,7 +23,7 @@ class DefaultHomePresenter: HomePresenter {
     
     func onViewDidLoad() {
         listMoviesInteractor.execute { result in
-            self.view.showLoadedInfo(input: result)
+            self.view?.showLoadedInfo(input: result)
         } errorHandler: { error in
             ErrorHandler.showError(error: error)
         }

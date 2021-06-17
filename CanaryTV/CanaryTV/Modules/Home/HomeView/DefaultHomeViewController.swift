@@ -15,6 +15,7 @@ class DefaultHomeViewController: BaseViewController {
     
     internal enum Constant {
         static let title = "Canary TV"
+        static let accessibilityIdentifier = "HomeView"
     }
     
     override func viewDidLoad() {

@@ -11,6 +11,7 @@ internal extension DefaultHomeViewController {
     
     func buildView() {
         title = Constant.title
+        view.accessibilityIdentifier = Constant.accessibilityIdentifier
     }
     
     func buildTableViewComponent() {

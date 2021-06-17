@@ -24,6 +24,8 @@ class DefaultDetailViewController: BaseViewController {
     internal enum Constant {
         static let title = "Detail"
         static let trailerButton = "Trailer"
+        static let accessibilityIdentifier = "DetailView"
+        static let accessibilityIdentifierTrailerButton = "TrailerButton"
         static let imageTitleHeight: CGFloat = 320
         static let elementsSeparator: CGFloat = 25
         static let margin: CGFloat = 16

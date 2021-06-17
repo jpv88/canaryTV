@@ -9,4 +9,13 @@ import UIKit
 import AVKit
 import AVFoundation
 
-class PlayerViewController: AVPlayerViewController {}
+class PlayerViewController: AVPlayerViewController {
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        view.accessibilityIdentifier = "PlayerView"
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+}

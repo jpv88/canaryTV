@@ -11,6 +11,7 @@ internal extension DefaultDetailViewController {
     
     func buildView() {
         title = Constant.title
+        view.accessibilityIdentifier = Constant.accessibilityIdentifier
         buildScrollView()
         buildContentView()
         buildTitleImageView()
@@ -43,6 +44,7 @@ internal extension DefaultDetailViewController {
     
     private func buildTrailerButton() {
         let component = UIButton()
+        component.accessibilityIdentifier = Constant.accessibilityIdentifierTrailerButton
         component.backgroundColor = .clear
         component.layer.cornerRadius = 5
         component.layer.borderWidth = 1

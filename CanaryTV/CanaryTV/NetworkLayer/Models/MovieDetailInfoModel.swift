@@ -32,12 +32,20 @@ struct DetailClass: Codable {
     let plot: String?
     let images: DetailImages?
     let actors, directors: [Ctor]?
-    let tags: [Country]?
+    let tags: [Tags]?
     let offlineEnabledForRent: Bool?
     let scores: [Score]?
-    let shortPlot, title: String?
+    let shortPlot: String?
+    let title: String?
     let numericalID: Int?
     let rating: DetailRating?
+}
+
+struct Tags: Codable {
+    let id: String?
+    let name: String?
+    let numericalId: Int?
+    let type: String?
 }
 
 // MARK: - Ctor
@@ -108,7 +116,7 @@ struct OrderOption: Codable {
     let type: String?
     let periodicPointsRewardAmount: Int?
     let price: String?
-    let priceWithoutCurrency: Int?
+    let priceWithoutCurrency: Double?
     let videoQuality: Country?
     let externalTiers: [ExternalTier]?
     let warnings: [Warning]?

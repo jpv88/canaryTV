@@ -33,7 +33,8 @@ class DefaultDetailPresenter: DetailPresenter {
 
     func showTrailer() {
         guard let id = dataModel.data?.id else { return }
-        trailerMovieInteractor.execute(input: id) { result in
+        guard let trailers = dataModel.data?.viewOptions?.public?.trailers, let audioLanguages = trailers[0].audioLanguages, let languageID = audioLanguages[0].id, let subtitles = trailers[0].subtitleLanguages, let subtitleID = subtitles[0].id else { return }
+        trailerMovieInteractor.execute(input: (id, languageID, subtitleID)) { result in
             self.playVideo(url: result)
         } errorHandler: { error in
             ErrorHandler.showError(error: error)

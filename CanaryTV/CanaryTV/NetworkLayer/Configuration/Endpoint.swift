@@ -16,7 +16,7 @@ enum Endpoint {
     case CinemaMovies
     case ComedyMovies
     case Movie(movieID: String)
-    case Trailer(movieID: String)
+    case Trailer(movieID: String, languageID: String, subtitleID: String)
 }
 
 protocol Requestable {
@@ -42,8 +42,8 @@ extension Endpoint {
             return ListComedyMovies()
         case .Movie(movieID: let id):
             return GetMovieDetailInfo(movieID: id)
-        case .Trailer(movieID: let id):
-            return GetTrailerURL(movieID: id)
+        case .Trailer(movieID: let id, languageID: let languageID, let subtitleID):
+            return GetTrailerURL(movieID: id, languageID: languageID, subtitleID: subtitleID)
         }
     }
 }

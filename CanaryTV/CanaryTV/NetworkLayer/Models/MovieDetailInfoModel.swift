@@ -9,168 +9,159 @@ import Foundation
 
 // MARK: - MovieDetailInfoModel
 struct MovieDetailInfoModel: Codable {
-    let data: DetailData?
+    let data: DetailClass?
 }
 
 // MARK: - DataClass
-struct DetailData: Codable {
-    let type, id: String?
-    let numericalID: Int?
-    let title, originalTitle: String?
-    let year: Int?
-    let shortPlot, plot: String?
-    let duration: Int?
-    let highlight: String?
+struct DetailClass: Codable {
+    let originalTitle: String?
     let durationInSeconds: Int?
-    let ultravioletEnabled: Bool?
-    let actors: [Actors]?
-    let awards: [Award]?
-    let classification: ClassificationFilm?
+    let offlineEnabledForEst: Bool?
+    let id: String?
     let countries: [Country]?
-    let directors: [Actors]?
+    let offlineEnabledForSvod: Bool?
     let genres: [Genre]?
-    let images: ImagesData?
-    let offlineEnabledForEst, offlineEnabledForRent, offlineEnabledForSvod: Bool?
+    let duration: Int?
+    let year: Int?
+    let labels: DetailLabels?
+    let type: String?
+    let classification: DetailClassification?
+    let ultravioletEnabled: Bool?
     let orderOptions: [OrderOption]?
-    let rating: Rating?
-    let scores: [Score]?
-    let tags: [Tags]?
     let viewOptions: ViewOptions?
-    let labels: Labels?
+    let plot: String?
+    let images: DetailImages?
+    let actors, directors: [Ctor]?
+    let tags: [Country]?
+    let offlineEnabledForRent: Bool?
+    let scores: [Score]?
+    let shortPlot, title: String?
+    let numericalID: Int?
+    let rating: DetailRating?
 }
 
 // MARK: - Ctor
-struct Actors: Codable {
-    let type: String?
+struct Ctor: Codable {
+    let numericalID: Int?
     let id: String?
-    let numericalId: Int?
+    let type: String?
     let photo: String?
     let name: String?
-}
-
-// MARK: - Award
-struct Award: Codable {
-    let type, id: String?
-    let numericalId: Int?
-    let name, awardDescription: String?
-    let year: Int?
-    let category, result: String?
-    let verdict: Verdict?
-    let photo: String?
-}
-
-// MARK: - Verdict
-struct Verdict: Codable {
-    let name, localizedName: String?
 }
 
 // MARK: - Classification
-struct ClassificationFilm: Codable {
-    let type, id: String?
-    let numericalId: Int?
-    let name: String?
+struct DetailClassification: Codable {
+    let id: String?
     let age: Int?
     let adult: Bool?
-    let classificationDescription: String?
+    let numericalID: Int?
+    let type, classificationDescription, name: String?
     let classificationDefault: Bool?
 }
 
 // MARK: - Country
 struct Country: Codable {
-    let type: String?
+    let numericalID: Int?
     let id: String?
-    let numericalId: Int?
+    let type: String?
     let name, abbr: String?
     let image: String?
     let position: Int?
 }
 
-// MARK: - Tags
-struct Tags: Codable {
-    let type, id, name : String?
-    let numericalId: Int?
-}
-
-
-
 // MARK: - Genre
 struct Genre: Codable {
-    let type, id: String?
-    let numericalId: Int?
-    let name: String?
-    let adult, erotic, kids: Bool?
-    let additionalImages: GenreAdditionalImages?
+    let erotic: Bool?
+    let additionalImages: AdditionalImages?
+    let id: String?
+    let adult, kids: Bool?
+    let numericalID: Int?
+    let type, name: String?
 }
 
-// MARK: - GenreAdditionalImages
-struct GenreAdditionalImages: Codable {
+// MARK: - AdditionalImages
+struct AdditionalImages: Codable {
     let icon: String?
 }
 
 // MARK: - Images
-struct ImagesData: Codable {
-    let artwork, snapshot: String?
+struct DetailImages: Codable {
+    let artwork: String?
     let ribbons: [Ribbon]?
+    let snapshot: String?
+}
+
+// MARK: - Labels
+struct DetailLabels: Codable {
+    let videoQualities: [Country]?
+    let audioQualities, hdrTypes: [AudioQuality]?
+    let purchaseTypes: [PurchaseType]?
 }
 
 // MARK: - OrderOption
 struct OrderOption: Codable {
-    let type, id: String?
-    let numericalId: Int?
-    let periodicPointsRewardAmount: Int?
-    let price: String?
-    let priceWithoutCurrency: Double?
+    let id: String?
+    let numericalID: Int?
     let points: Points?
     let purchaseType: PurchaseType?
+    let provider: Provider?
+    let type: String?
+    let periodicPointsRewardAmount: Int?
+    let price: String?
+    let priceWithoutCurrency: Int?
     let videoQuality: Country?
     let externalTiers: [ExternalTier]?
     let warnings: [Warning]?
-    let provider: Provider?
 }
 
 // MARK: - ExternalTier
 struct ExternalTier: Codable {
-    let type: String?
-    let id: String?
-    let price: String?
+    let type, id, price: String?
 }
 
 // MARK: - Points
 struct Points: Codable {
-    let cost, reward: Int?
+    let reward, cost: Int?
 }
 
 // MARK: - Provider
 struct Provider: Codable {
-    let type, id: String?
-    let numericalId: Int?
+    let id: String?
+    let numericalID: Int?
+    let type: String?
+    let isMarketplace: Bool?
     let name: String?
-    let pairingFlow, isMarketplace: Bool?
-    let identifier: String?
+    let pairingFlow: Bool?
 }
 
 // MARK: - Warning
 struct Warning: Codable {
-    let field, code, message: String?
+    let field, message, code: String?
+}
+
+// MARK: - Rating
+struct DetailRating: Codable {
+    let average, scale: Int?
 }
 
 // MARK: - Score
 struct Score: Codable {
-    let type, id: String?
-    let numericalId: Int?
-    let href: String?
-    let amountOfVotes: Int?
+    let site: Site?
     let formattedAmountOfVotes: String?
     let score: Double?
+    let id: String?
     let highlighted: Bool?
-    let site: Site?
+    let amountOfVotes: Int?
+    let href: String?
+    let numericalID: Int?
+    let type: String?
 }
 
 // MARK: - ViewOptions
 struct ViewOptions: Codable {
     let support: Labels?
-    let viewOptionsPublic: Public?
-    let viewOptionsPrivate: Private?
+    let `public`: Public?
+    let `private`: Private?
 }
 
 // MARK: - Private
@@ -180,19 +171,19 @@ struct Private: Codable {
 
 // MARK: - OfflineStream
 struct OfflineStream: Codable {
-    let hdrTypes: [AudioQuality]?
-    let streamingDRMTypes: [StreamingDRMType]?
-    let audioQualities: [AudioQuality]?
     let subtitleLanguages: [Language]?
     let videoQualities: [Country]?
     let audioLanguages: [Language]?
+    let hdrTypes: [AudioQuality]?
+    let streamingDRMTypes: [StreamingDRMType]?
+    let audioQualities: [AudioQuality]?
 }
 
 // MARK: - Language
 struct Language: Codable {
-    let type: String?
-    let id: String?
     let numericalID: Int?
+    let id: String?
+    let type: String?
     let name, abbr: String?
 }
 

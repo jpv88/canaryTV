@@ -9,7 +9,7 @@ import Foundation
 
 class GetMovieTrailerURLInteractor: InOutInteractor<GetMovieTrailerURLInteractor.Input, GetMovieTrailerURLInteractor.Output> {
     
-    typealias Input = String
+    typealias Input = (movieID: String, languageID: String, subtitleID: String)
     typealias Output = URL
     
     private let webService: WebService
@@ -21,7 +21,7 @@ class GetMovieTrailerURLInteractor: InOutInteractor<GetMovieTrailerURLInteractor
     
     override func execute(input: Input, completion: @escaping (Output) -> Void, errorHandler: @escaping (Error) -> Void) {
         
-        webService.loadFromWebService(type: MovieTrailerModel.self, endpoint: .Trailer(movieID: input)) { result in
+        webService.loadFromWebService(type: MovieTrailerModel.self, endpoint: .Trailer(movieID: input.movieID, languageID: input.languageID, subtitleID: input.subtitleID)) { result in
             guard let streamInfo = result.data?.streamInfos, let urlParam = streamInfo[0].url, let url = URL(string: urlParam) else {
                 errorHandler(MyCustomError.ApiError("Some is wrong"))
                 return

@@ -21,7 +21,7 @@ class GetMovieDetailInteractor: InOutInteractor<GetMovieDetailInteractor.Input, 
     
     override func execute(input: Input, completion: @escaping (Output) -> Void, errorHandler: @escaping (Error) -> Void) {
         
-        webService.loadFromWebService(type: MovieDetailInfoModel.self, endpoint: .Movie(movieID: input)) { result in
+        webService.loadFromWebService(type: MovieDetailInfoModel.self, endpoint: .Movie(movieID: input)) { [weak self] result in
             completion(result)
         } errorHandler: { error in
             errorHandler(error)

@@ -21,7 +21,7 @@ class GetMovieTrailerURLInteractor: InOutInteractor<GetMovieTrailerURLInteractor
     
     override func execute(input: Input, completion: @escaping (Output) -> Void, errorHandler: @escaping (Error) -> Void) {
         
-        webService.loadFromWebService(type: MovieTrailerModel.self, endpoint: .Trailer(movieID: input.movieID, languageID: input.languageID, subtitleID: input.subtitleID)) { result in
+        webService.loadFromWebService(type: MovieTrailerModel.self, endpoint: .Trailer(movieID: input.movieID, languageID: input.languageID, subtitleID: input.subtitleID)) { [weak self] result in
             guard let streamInfo = result.data?.streamInfos, let urlParam = streamInfo[0].url, let url = URL(string: urlParam) else {
                 errorHandler(MyCustomError.ApiError("Some is wrong"))
                 return

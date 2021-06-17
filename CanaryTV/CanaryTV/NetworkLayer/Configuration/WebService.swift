@@ -29,14 +29,14 @@ class WebService {
         
         let myRequest = endpoint.getRequest
 
-        AF.request(myRequest.path, method: myRequest.method, parameters: myRequest.parameters, encoding: JSONEncoding.default, headers: Constants.API.headers).responseJSON { response in
+        AF.request(myRequest.path, method: myRequest.method, parameters: myRequest.parameters, encoding: JSONEncoding.default, headers: Constants.API.headers).responseJSON { [weak self] response in
 
             vc?.hideLoader()            
             
             switch response.result {
             case .success( _):
                 do {
-                    if let data = response.data, let object = try? self.decoder.decode(T.self, from: data) {
+                    if let data = response.data, let object = try? self?.decoder.decode(T.self, from: data) {
                         completionHandler(object)
                     } else {
                         throw MyCustomError.NoParsedModel("Model could not be parsed")

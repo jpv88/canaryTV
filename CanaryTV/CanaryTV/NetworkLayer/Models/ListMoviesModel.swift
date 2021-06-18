@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - ListMoviesModel
-struct ListMoviesModel: Codable {
+@objc class ListMoviesModel: NSObject, Codable {
     let data: DataClass?
 }
 

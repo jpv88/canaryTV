@@ -7,6 +7,6 @@
 
 import UIKit
 
-protocol HomeViewController where Self: UIViewController {
+@objc protocol HomeViewController where Self: UIViewController {
     func showLoadedInfo(input: [ListMoviesModel])
 }

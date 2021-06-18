@@ -54,6 +54,10 @@ class DefaultDetailViewController: BaseViewController {
 
 extension DefaultDetailViewController: DetailViewController {
     
+    func showThisError(error: Error) {
+        showError(error: error)
+    }
+    
     func showThisInfo(image: URL, title: String, description: String, rating: String, year: String, duration: String) {
         imageTitle.load(url: image)
         titleLabel.text = title

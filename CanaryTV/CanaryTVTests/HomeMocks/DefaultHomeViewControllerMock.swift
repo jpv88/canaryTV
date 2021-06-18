@@ -11,9 +11,13 @@ import XCTest
 class DefaultHomeViewControllerMock: DefaultHomeViewController {
     
     var isDefaultHomeViewControllerTestCalled = false
+    var isShowErrorCalled = false
     
     override func showLoadedInfo(input: [ListMoviesModel]) {
         isDefaultHomeViewControllerTestCalled = true
     }
     
+    override func showThisError(error: Error) {
+        isShowErrorCalled = true
+    }
 }

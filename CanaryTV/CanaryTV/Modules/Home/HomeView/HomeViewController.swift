@@ -9,4 +9,5 @@ import UIKit
 
 @objc protocol HomeViewController where Self: UIViewController {
     func showLoadedInfo(input: [ListMoviesModel])
+    func showThisError(error: Error)
 }

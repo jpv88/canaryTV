@@ -38,6 +38,9 @@
 		7F3F08BC267CB5AF007834EF /* DefaultDetailViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F08BB267CB5AF007834EF /* DefaultDetailViewControllerMock.swift */; };
 		7F3F08BE267CB5C0007834EF /* DefaultDetailRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F08BD267CB5C0007834EF /* DefaultDetailRouterMock.swift */; };
 		7F3F08C0267CB7E2007834EF /* GetMovieTrailerURLInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F08BF267CB7E2007834EF /* GetMovieTrailerURLInteractorMock.swift */; };
+		7F3F08C2267CDC05007834EF /* DefaultHomePresenterErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F08C1267CDC05007834EF /* DefaultHomePresenterErrorTest.swift */; };
+		7F3F08C6267CDEA5007834EF /* ListMoviesInteractorErrorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F08C5267CDEA5007834EF /* ListMoviesInteractorErrorMock.swift */; };
+		7F3F08C8267CDEBB007834EF /* GetMovieDetailInteractorErrorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F08C7267CDEBB007834EF /* GetMovieDetailInteractorErrorMock.swift */; };
 		7FFED40226738A6100A8D967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED40126738A6100A8D967 /* AppDelegate.swift */; };
 		7FFED40426738A6100A8D967 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED40326738A6100A8D967 /* SceneDelegate.swift */; };
 		7FFED40B26738A6800A8D967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FFED40A26738A6800A8D967 /* Assets.xcassets */; };
@@ -54,7 +57,6 @@
 		7FFED4532673A6D000A8D967 /* GetTrailerURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4522673A6D000A8D967 /* GetTrailerURL.swift */; };
 		7FFED4562673AF4500A8D967 /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4552673AF4500A8D967 /* UIApplication+TopViewController.swift */; };
 		7FFED4582673AFCD00A8D967 /* UIViewController+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4572673AFCD00A8D967 /* UIViewController+ActivityIndicator.swift */; };
-		7FFED45A2673B15B00A8D967 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4592673B15B00A8D967 /* ErrorHandler.swift */; };
 		7FFED46226775AEC00A8D967 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED46126775AEC00A8D967 /* HomeViewController.swift */; };
 		7FFED46426775B0000A8D967 /* DefaultHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED46326775B0000A8D967 /* DefaultHomeViewController.swift */; };
 		7FFED46726775BF100A8D967 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED46626775BF100A8D967 /* HomePresenter.swift */; };
@@ -134,6 +136,9 @@
 		7F3F08BB267CB5AF007834EF /* DefaultDetailViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDetailViewControllerMock.swift; sourceTree = "<group>"; };
 		7F3F08BD267CB5C0007834EF /* DefaultDetailRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDetailRouterMock.swift; sourceTree = "<group>"; };
 		7F3F08BF267CB7E2007834EF /* GetMovieTrailerURLInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieTrailerURLInteractorMock.swift; sourceTree = "<group>"; };
+		7F3F08C1267CDC05007834EF /* DefaultHomePresenterErrorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHomePresenterErrorTest.swift; sourceTree = "<group>"; };
+		7F3F08C5267CDEA5007834EF /* ListMoviesInteractorErrorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMoviesInteractorErrorMock.swift; sourceTree = "<group>"; };
+		7F3F08C7267CDEBB007834EF /* GetMovieDetailInteractorErrorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieDetailInteractorErrorMock.swift; sourceTree = "<group>"; };
 		7FFED3FE26738A6100A8D967 /* CanaryTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanaryTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFED40126738A6100A8D967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FFED40326738A6100A8D967 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,7 +159,6 @@
 		7FFED4522673A6D000A8D967 /* GetTrailerURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTrailerURL.swift; sourceTree = "<group>"; };
 		7FFED4552673AF4500A8D967 /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
 		7FFED4572673AFCD00A8D967 /* UIViewController+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActivityIndicator.swift"; sourceTree = "<group>"; };
-		7FFED4592673B15B00A8D967 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		7FFED46126775AEC00A8D967 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7FFED46326775B0000A8D967 /* DefaultHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHomeViewController.swift; sourceTree = "<group>"; };
 		7FFED46626775BF100A8D967 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -295,8 +299,10 @@
 		7F3F08BA267CB579007834EF /* CommonMocks */ = {
 			isa = PBXGroup;
 			children = (
+				7F3F08C7267CDEBB007834EF /* GetMovieDetailInteractorErrorMock.swift */,
 				7F3F08A3267BDAEA007834EF /* GetMovieDetailInteractorMock.swift */,
 				7F3F08BF267CB7E2007834EF /* GetMovieTrailerURLInteractorMock.swift */,
+				7F3F08C5267CDEA5007834EF /* ListMoviesInteractorErrorMock.swift */,
 				7F3F08A1267BDAC8007834EF /* ListMoviesInteractorMock.swift */,
 				7F3F08A5267BDBB1007834EF /* WebServiceMock.swift */,
 			);
@@ -339,6 +345,7 @@
 			children = (
 				7FFED41A26738A6A00A8D967 /* Info.plist */,
 				7F3F08B7267CB3BD007834EF /* DefaultDetailPresenterTest.swift */,
+				7F3F08C1267CDC05007834EF /* DefaultHomePresenterErrorTest.swift */,
 				7F3F089E267BD3CD007834EF /* DefaultHomePresenterTest.swift */,
 				7F3F08BA267CB579007834EF /* CommonMocks */,
 				7F3F08B9267CB552007834EF /* DetailMocks */,
@@ -379,7 +386,6 @@
 			children = (
 				7FFED46E26775CC700A8D967 /* Colors.swift */,
 				7FFED44C2673A4FE00A8D967 /* Constants.swift */,
-				7FFED4592673B15B00A8D967 /* ErrorHandler.swift */,
 				7F3F0891267A3673007834EF /* Fonts.swift */,
 				7FFED4542673AF3400A8D967 /* Utils */,
 			);
@@ -722,7 +728,6 @@
 				7FFED4A42678D4FE00A8D967 /* UIImageView+LoadURL.swift in Sources */,
 				7FFED46B26775C0D00A8D967 /* HomeRouter.swift in Sources */,
 				7F3F0897267A5BE0007834EF /* GetMovieTrailerURLInteractor.swift in Sources */,
-				7FFED45A2673B15B00A8D967 /* ErrorHandler.swift in Sources */,
 				7F3F0899267A5BEB007834EF /* GetMovieTrailerURLInteractorInjector.swift in Sources */,
 				7FFED47926776C9900A8D967 /* HomeInjection.swift in Sources */,
 				7F3F088E2679FD1D007834EF /* DetailRouter.swift in Sources */,
@@ -762,8 +767,11 @@
 				7F3F08A6267BDBB1007834EF /* WebServiceMock.swift in Sources */,
 				7F3F08BC267CB5AF007834EF /* DefaultDetailViewControllerMock.swift in Sources */,
 				7F3F08C0267CB7E2007834EF /* GetMovieTrailerURLInteractorMock.swift in Sources */,
+				7F3F08C8267CDEBB007834EF /* GetMovieDetailInteractorErrorMock.swift in Sources */,
 				7F3F08B0267CA2C9007834EF /* DefaultHomeViewControllerMock.swift in Sources */,
+				7F3F08C6267CDEA5007834EF /* ListMoviesInteractorErrorMock.swift in Sources */,
 				7F3F08BE267CB5C0007834EF /* DefaultDetailRouterMock.swift in Sources */,
+				7F3F08C2267CDC05007834EF /* DefaultHomePresenterErrorTest.swift in Sources */,
 				7F3F08B2267CAF0A007834EF /* DefaultHomeRouterMock.swift in Sources */,
 				7F3F08B8267CB3BD007834EF /* DefaultDetailPresenterTest.swift in Sources */,
 				7F3F08A2267BDAC8007834EF /* ListMoviesInteractorMock.swift in Sources */,

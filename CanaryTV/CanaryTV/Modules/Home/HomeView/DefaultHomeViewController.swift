@@ -38,6 +38,11 @@ class DefaultHomeViewController: BaseViewController {
 
 extension DefaultHomeViewController: HomeViewController {
     
+    func showThisError(error: Error) {
+        showError(error: error)
+    }
+    
+    
     func showLoadedInfo(input: [ListMoviesModel]) {
         tableManager?.set(input: input)
     }

@@ -24,16 +24,16 @@ class DefaultHomePresenter: HomePresenter {
     func onViewDidLoad() {
         listMoviesInteractor.execute { [weak self] result in
             self?.view?.showLoadedInfo(input: result)
-        } errorHandler: { error in
-            ErrorHandler.showError(error: error)
+        } errorHandler: { [weak self] error in
+            self?.view?.showThisError(error: error)
         }
     }
     
     func someMoviePressed(movieID: String) {
         getMovieDetailInfoInteractor.execute(input: movieID) { [weak self] result in
             self?.router.showDetailView(movieDetail: result)
-        } errorHandler: { error in
-            ErrorHandler.showError(error: error)
+        } errorHandler: { [weak self] error in
+            self?.view?.showThisError(error: error)
         }
 
     }

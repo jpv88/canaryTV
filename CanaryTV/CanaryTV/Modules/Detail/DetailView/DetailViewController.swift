@@ -9,4 +9,5 @@ import UIKit
 
 @objc protocol DetailViewController where Self: UIViewController {
     func showThisInfo(image: URL, title: String, description: String, rating: String, year: String, duration: String)
+    func showThisError(error: Error)
 }

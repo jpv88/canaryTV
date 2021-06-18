@@ -31,7 +31,10 @@ class ListMoviesInteractorMock: ListMoviesInteractor {
     
     private func parse(jsonData: Data) -> [ListMoviesModel]? {
         do {
-            let decodedData = try JSONDecoder().decode(ListMoviesInteractor.Output.self,
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .deferredToDate
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let decodedData = try decoder.decode(ListMoviesInteractor.Output.self,
                                                        from: jsonData)
             return decodedData
         } catch {

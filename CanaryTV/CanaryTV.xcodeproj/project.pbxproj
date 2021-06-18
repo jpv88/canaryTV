@@ -34,11 +34,14 @@
 		7F3F08B4267CB254007834EF /* MovieDetailInfoModelJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F3F08B3267CB254007834EF /* MovieDetailInfoModelJSON.json */; };
 		7F3F08B5267CB25A007834EF /* MovieDetailInfoModelJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F3F08B3267CB254007834EF /* MovieDetailInfoModelJSON.json */; };
 		7F3F08B6267CB25B007834EF /* MovieDetailInfoModelJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F3F08B3267CB254007834EF /* MovieDetailInfoModelJSON.json */; };
+		7F3F08B8267CB3BD007834EF /* DefaultDetailPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F08B7267CB3BD007834EF /* DefaultDetailPresenterTest.swift */; };
+		7F3F08BC267CB5AF007834EF /* DefaultDetailViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F08BB267CB5AF007834EF /* DefaultDetailViewControllerMock.swift */; };
+		7F3F08BE267CB5C0007834EF /* DefaultDetailRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F08BD267CB5C0007834EF /* DefaultDetailRouterMock.swift */; };
+		7F3F08C0267CB7E2007834EF /* GetMovieTrailerURLInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F08BF267CB7E2007834EF /* GetMovieTrailerURLInteractorMock.swift */; };
 		7FFED40226738A6100A8D967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED40126738A6100A8D967 /* AppDelegate.swift */; };
 		7FFED40426738A6100A8D967 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED40326738A6100A8D967 /* SceneDelegate.swift */; };
 		7FFED40B26738A6800A8D967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FFED40A26738A6800A8D967 /* Assets.xcassets */; };
 		7FFED40E26738A6800A8D967 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFED40C26738A6800A8D967 /* LaunchScreen.storyboard */; };
-		7FFED41926738A6A00A8D967 /* CanaryTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED41826738A6A00A8D967 /* CanaryTVTests.swift */; };
 		7FFED42426738A6A00A8D967 /* CanaryTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED42326738A6A00A8D967 /* CanaryTVUITests.swift */; };
 		7FFED43826739D8800A8D967 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7FFED43726739D8800A8D967 /* Alamofire */; };
 		7FFED43B26739ED600A8D967 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 7FFED43A26739ED600A8D967 /* Swinject */; };
@@ -127,6 +130,10 @@
 		7F3F08AF267CA2C9007834EF /* DefaultHomeViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHomeViewControllerMock.swift; sourceTree = "<group>"; };
 		7F3F08B1267CAF0A007834EF /* DefaultHomeRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHomeRouterMock.swift; sourceTree = "<group>"; };
 		7F3F08B3267CB254007834EF /* MovieDetailInfoModelJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MovieDetailInfoModelJSON.json; sourceTree = "<group>"; };
+		7F3F08B7267CB3BD007834EF /* DefaultDetailPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDetailPresenterTest.swift; sourceTree = "<group>"; };
+		7F3F08BB267CB5AF007834EF /* DefaultDetailViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDetailViewControllerMock.swift; sourceTree = "<group>"; };
+		7F3F08BD267CB5C0007834EF /* DefaultDetailRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDetailRouterMock.swift; sourceTree = "<group>"; };
+		7F3F08BF267CB7E2007834EF /* GetMovieTrailerURLInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieTrailerURLInteractorMock.swift; sourceTree = "<group>"; };
 		7FFED3FE26738A6100A8D967 /* CanaryTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanaryTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFED40126738A6100A8D967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FFED40326738A6100A8D967 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,7 +141,6 @@
 		7FFED40D26738A6800A8D967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FFED40F26738A6800A8D967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FFED41426738A6A00A8D967 /* CanaryTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanaryTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FFED41826738A6A00A8D967 /* CanaryTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanaryTVTests.swift; sourceTree = "<group>"; };
 		7FFED41A26738A6A00A8D967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FFED41F26738A6A00A8D967 /* CanaryTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanaryTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFED42326738A6A00A8D967 /* CanaryTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanaryTVUITests.swift; sourceTree = "<group>"; };
@@ -259,16 +265,13 @@
 			path = MovieTrailer;
 			sourceTree = "<group>";
 		};
-		7F3F08A0267BDA72007834EF /* Mocks */ = {
+		7F3F08A0267BDA72007834EF /* HomeMocks */ = {
 			isa = PBXGroup;
 			children = (
-				7F3F08A1267BDAC8007834EF /* ListMoviesInteractorMock.swift */,
-				7F3F08A3267BDAEA007834EF /* GetMovieDetailInteractorMock.swift */,
-				7F3F08A5267BDBB1007834EF /* WebServiceMock.swift */,
 				7F3F08AF267CA2C9007834EF /* DefaultHomeViewControllerMock.swift */,
 				7F3F08B1267CAF0A007834EF /* DefaultHomeRouterMock.swift */,
 			);
-			path = Mocks;
+			path = HomeMocks;
 			sourceTree = "<group>";
 		};
 		7F3F08A7267C9ABE007834EF /* JSON */ = {
@@ -278,6 +281,26 @@
 				7F3F08AA267CA05E007834EF /* ListMoviesModelJSON.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		7F3F08B9267CB552007834EF /* DetailMocks */ = {
+			isa = PBXGroup;
+			children = (
+				7F3F08BB267CB5AF007834EF /* DefaultDetailViewControllerMock.swift */,
+				7F3F08BD267CB5C0007834EF /* DefaultDetailRouterMock.swift */,
+			);
+			path = DetailMocks;
+			sourceTree = "<group>";
+		};
+		7F3F08BA267CB579007834EF /* CommonMocks */ = {
+			isa = PBXGroup;
+			children = (
+				7F3F08A3267BDAEA007834EF /* GetMovieDetailInteractorMock.swift */,
+				7F3F08BF267CB7E2007834EF /* GetMovieTrailerURLInteractorMock.swift */,
+				7F3F08A1267BDAC8007834EF /* ListMoviesInteractorMock.swift */,
+				7F3F08A5267BDBB1007834EF /* WebServiceMock.swift */,
+			);
+			path = CommonMocks;
 			sourceTree = "<group>";
 		};
 		7FFED3F526738A6100A8D967 = {
@@ -314,11 +337,13 @@
 		7FFED41726738A6A00A8D967 /* CanaryTVTests */ = {
 			isa = PBXGroup;
 			children = (
-				7F3F08A7267C9ABE007834EF /* JSON */,
-				7F3F08A0267BDA72007834EF /* Mocks */,
-				7FFED41826738A6A00A8D967 /* CanaryTVTests.swift */,
-				7F3F089E267BD3CD007834EF /* DefaultHomePresenterTest.swift */,
 				7FFED41A26738A6A00A8D967 /* Info.plist */,
+				7F3F08B7267CB3BD007834EF /* DefaultDetailPresenterTest.swift */,
+				7F3F089E267BD3CD007834EF /* DefaultHomePresenterTest.swift */,
+				7F3F08BA267CB579007834EF /* CommonMocks */,
+				7F3F08B9267CB552007834EF /* DetailMocks */,
+				7F3F08A0267BDA72007834EF /* HomeMocks */,
+				7F3F08A7267C9ABE007834EF /* JSON */,
 			);
 			path = CanaryTVTests;
 			sourceTree = "<group>";
@@ -735,11 +760,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F3F08A6267BDBB1007834EF /* WebServiceMock.swift in Sources */,
+				7F3F08BC267CB5AF007834EF /* DefaultDetailViewControllerMock.swift in Sources */,
+				7F3F08C0267CB7E2007834EF /* GetMovieTrailerURLInteractorMock.swift in Sources */,
 				7F3F08B0267CA2C9007834EF /* DefaultHomeViewControllerMock.swift in Sources */,
+				7F3F08BE267CB5C0007834EF /* DefaultDetailRouterMock.swift in Sources */,
 				7F3F08B2267CAF0A007834EF /* DefaultHomeRouterMock.swift in Sources */,
+				7F3F08B8267CB3BD007834EF /* DefaultDetailPresenterTest.swift in Sources */,
 				7F3F08A2267BDAC8007834EF /* ListMoviesInteractorMock.swift in Sources */,
 				7F3F08A4267BDAEA007834EF /* GetMovieDetailInteractorMock.swift in Sources */,
-				7FFED41926738A6A00A8D967 /* CanaryTVTests.swift in Sources */,
 				7F3F089F267BD3CD007834EF /* DefaultHomePresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,7 +32,10 @@ class GetMovieDetailInteractorMock: GetMovieDetailInteractor {
     
     private func parse(jsonData: Data) -> MovieDetailInfoModel? {
         do {
-            let decodedData = try JSONDecoder().decode(MovieDetailInfoModel.self,
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .deferredToDate
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let decodedData = try decoder.decode(MovieDetailInfoModel.self,
                                                        from: jsonData)
             return decodedData
         } catch {

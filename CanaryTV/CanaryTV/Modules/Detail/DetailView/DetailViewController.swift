@@ -7,6 +7,6 @@
 
 import UIKit
 
-protocol DetailViewController where Self: UIViewController {
+@objc protocol DetailViewController where Self: UIViewController {
     func showThisInfo(image: URL, title: String, description: String, rating: String, year: String, duration: String)
 }

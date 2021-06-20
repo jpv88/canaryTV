@@ -1,0 +1,366 @@
+commit 91a7efee1c830285356ae99b9516602ffae91e0a
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Fri Jun 18 15:11:23 2021 +0100
+
+    added testing for errors
+
+commit 58f683c23bdcc8b3788c68d10cf89e5949864f25
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Fri Jun 18 14:37:28 2021 +0100
+
+    cleaning code
+
+commit 11d09a06c1e03d70e123dcef15e21be32784132c
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Fri Jun 18 13:01:28 2021 +0100
+
+    fixed discard changes
+
+commit 7995a7927550267d334ca0bd9b5aca9a39280acf
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Fri Jun 18 12:59:48 2021 +0100
+
+    added detailPresenter testing
+
+commit 8ea2b74c8945c887f455573e309127e3bde5de23
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Fri Jun 18 11:56:21 2021 +0100
+
+    added testing for homePresenter
+
+commit 6e86393744e3c52198823b972da39c13cc8d9c56
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Thu Jun 17 19:31:10 2021 +0100
+
+    fixed model data
+
+commit 6243d141ab8580df1e001747c0110386962e9e86
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Thu Jun 17 18:29:14 2021 +0100
+
+    added some uitesting
+
+commit 558c085b1c4880f3dfe185816a659d67e785a7f8
+Merge: cf7526e 9b04571
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Thu Jun 17 15:57:40 2021 +0100
+
+    Merge branch 'main' into develop
+
+commit 9b045717899411a37dc7310844501ee4fc44e8e9
+Author: Jared Pérez Vega <jrd.perez88@gmail.com>
+Date:   Thu Jun 17 15:56:19 2021 +0100
+
+    Update README.md
+
+commit cf7526edd78deed935e5174174a58402b5e5a4eb
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Thu Jun 17 15:30:50 2021 +0100
+
+    avoid retain cycle
+
+commit 622b3b4b0ff2fb00e0509a08a71723e5c4a945f2
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Thu Jun 17 15:21:34 2021 +0100
+
+    avoid retain cycles
+
+commit ba6e6b2daf8f9a375f3125476cd280c8113479bd
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Thu Jun 17 14:59:44 2021 +0100
+
+    fixed data model
+
+commit 0df6266e917a7e314a857d2ebb66a63d18545d17
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Thu Jun 17 00:01:27 2021 +0100
+
+    added injection for video player
+
+commit 4ced887f45c8d81ce812b5427fa3afc296d3f942
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Wed Jun 16 23:48:52 2021 +0100
+
+    fixed dependencies
+
+commit 1da3df0e1c759e1546a08c5e3e85e7dea1212da8
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Wed Jun 16 17:54:05 2021 +0100
+
+    added playerviewcontroller for showing trailer
+
+commit 0e9f35aa504d2087ed5cdd350dec6509c6008fcd
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Wed Jun 16 17:35:18 2021 +0100
+
+    added new interactor to detail presenter
+
+commit b68a818000a2aee6a6c213496eb25aac1bb2a911
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Wed Jun 16 17:25:14 2021 +0100
+
+    added trailer interactor use case
+
+commit 8b9c60bd9c1e52125422805e11576f73bd8e6fdc
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Wed Jun 16 17:14:11 2021 +0100
+
+    added new endpoint
+
+commit 660c195c4132b8c0fc19fd484e5a7bc8ac64d544
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Wed Jun 16 16:32:47 2021 +0100
+
+    added trailer button
+
+commit 365e3ebfe2f5776d74ed16ccd07a26fd4e6f0c67
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Wed Jun 16 16:10:19 2021 +0100
+
+    added some visual elements
+
+commit a8fb802885c9102bd2f359347a32a933a27dcf86
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Wed Jun 16 15:18:19 2021 +0100
+
+    fixed constraints
+
+commit a595d629433b7f69c41313ed14fc1ca90f8bbd91
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Wed Jun 16 14:59:03 2021 +0100
+
+    added fonts
+
+commit bacadfcc6f9743afb27cf22a759951040f4367b5
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Wed Jun 16 14:30:40 2021 +0100
+
+    fixed constraints
+
+commit 96cb672b8b1548811dcd1e7a0d650a1effba76cd
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Wed Jun 16 13:14:23 2021 +0100
+
+    added navigation to detail screen
+
+commit eac77675be5e525e1e88f56eb141bdf3d4126a24
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Wed Jun 16 12:33:18 2021 +0100
+
+    deleted forced optionals
+
+commit 8c2d14bd3f1481f12e2eeb5bfdc5b18001b3f3e8
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Wed Jun 16 12:12:00 2021 +0100
+
+    added new viper module
+
+commit e4b25311b6467805f3e29be1c372b76393071b94
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Tue Jun 15 17:49:40 2021 +0100
+
+    navigate to new module with dataModel
+
+commit 0964aacbaa1d161cbe4ebb6449ca463381867501
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Tue Jun 15 17:47:30 2021 +0100
+
+    added new datamodel
+
+commit ed1200ca4c41a6167966cd626a64706b5af1b3b6
+Author: Jared <jrd.perez88@gmail.com>
+Date:   Tue Jun 15 16:50:10 2021 +0100
+
+    testing commit new machine
+
+commit b3955fa15520aedb1c31d88f30cb2b91ec1681e5
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Tue Jun 15 16:30:39 2021 +0100
+
+    added new interactor for get movie detail usecase
+
+commit 3ae61e8970fcff169b21efa132cfa37227097434
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Tue Jun 15 15:56:26 2021 +0100
+
+    fixed getting movie detail
+
+commit 659b5271f4f15bf9637a6d379cec694e6360f284
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Tue Jun 15 15:19:23 2021 +0100
+
+    extend film to another module
+
+commit 550515f258ef2ed0dbacfac26cb62b8b83bc8636
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Tue Jun 15 14:31:31 2021 +0100
+
+    fixed collection
+
+commit dad2ee662d91ca93cc1cbb9f4faf1c98a2836e18
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Tue Jun 15 14:21:51 2021 +0100
+
+    added collection view cell
+
+commit 2f0045f0ce5824823cbe184c0170430639879933
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Tue Jun 15 12:48:28 2021 +0100
+
+    making tableviewcell a collectionview datasource
+
+commit 50862b3dfeedce5bbfca86f2f40eb9ebc17800e2
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Tue Jun 15 11:29:13 2021 +0100
+
+    showing information in cells
+
+commit fc678e00b8e15a021d30cdf4e995675dc76dc252
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Tue Jun 15 10:48:37 2021 +0100
+
+    added all api calls to interactor
+
+commit f61b73f95e65a65347e5a75ecb7b07042b6f5267
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Tue Jun 15 10:29:22 2021 +0100
+
+    fixed data model
+
+commit c04199bb98c2c3931a5db6192f8680b15c0f46e1
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Tue Jun 15 09:37:39 2021 +0100
+
+    added new endpoints
+
+commit 4e551a14ba54e383e0e8638594bb9deb8ec04146
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Mon Jun 14 20:22:28 2021 +0100
+
+    making interactor async
+
+commit d6b601d7147a609e903aceee22e7048a030866a2
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Mon Jun 14 18:56:16 2021 +0100
+
+    added interactor and fixed circular swinject injection
+
+commit fdeb655a7dd9f2fb07f1b1b92c38884e506b0d60
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Mon Jun 14 16:46:17 2021 +0100
+
+    added tableviewcell
+
+commit c4acc91f504b0f76eb33c4f50c46582fee2ea6f2
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Mon Jun 14 16:07:58 2021 +0100
+
+    added table manager for list movies
+
+commit 6d4abfdef58114f5ac40cd23758f61e1abc5d8c3
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Mon Jun 14 15:21:09 2021 +0100
+
+    added tableview
+
+commit 935b56bb4365ee8f0a5fec9f83c085a469a3a6b5
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Mon Jun 14 14:52:53 2021 +0100
+
+    removed unnecessary files
+
+commit d3fb09f75ea3c4aa5525993ab195b1d1ce5e995e
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Mon Jun 14 14:10:54 2021 +0100
+
+    deleted unnecessary import
+
+commit c921bc2ce63d6e2c22780a0357ac1e6359041f28
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Mon Jun 14 13:39:24 2021 +0100
+
+    pretty start app
+
+commit a34f1de838f4599092a6c23a5c3a2ee4dfb146cb
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Mon Jun 14 13:25:48 2021 +0100
+
+    deleted main storyboard
+
+commit c41e6bab49030638dfe0da3864fab7ed10229fc0
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Mon Jun 14 13:18:54 2021 +0100
+
+    added dependencies injection for home module
+
+commit 4334dad367c9a80bd630f1341aa7c6d95e8a3e24
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Mon Jun 14 11:42:27 2021 +0100
+
+    created home module
+
+commit 087d8e59f00f019acb0875ef40619cb16cf13a2d
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Fri Jun 11 19:48:28 2021 +0100
+
+    fixed activity indicator
+
+commit bdcac62d12f1c03e56af054168ab0f018abe88e5
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Fri Jun 11 19:35:39 2021 +0100
+
+    added first response model
+
+commit 87eb0f14d8a11f13c7a2285bd509aa815fd97643
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Fri Jun 11 16:33:51 2021 +0100
+
+    fixed base url
+
+commit 96ae21151b363857e7115648dbcfffaf41dd7cfe
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Fri Jun 11 16:02:45 2021 +0100
+
+    added error handler
+
+commit b0ab4867c2fd5348feb6485b9786ceaef0b4a4da
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Fri Jun 11 15:52:32 2021 +0100
+
+    network layer v1.0
+
+commit 220f6747e627f5c259c6e63503e11a6396322930
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Fri Jun 11 14:48:36 2021 +0100
+
+    added swinject library
+
+commit eaba4bb0f18d26f6af293ddfdde2ab80eb93a623
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Fri Jun 11 14:34:25 2021 +0100
+
+    added alamofire library
+
+commit a0921970c0d10cf4e04626c294ccd7da5cbdfd77
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Fri Jun 11 14:17:43 2021 +0100
+
+    ordered files
+
+commit 29117669271dd286d387d64d54e664d258e5e4a5
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Fri Jun 11 13:50:59 2021 +0100
+
+    initial commit
+
+commit 611d3f44112332ae1aaf561197896ce811c22f22
+Author: Jared Perez Vega <jrd.perez88@gmail.com>
+Date:   Fri Jun 11 13:10:11 2021 +0100
+
+    readme
+
+commit a09c8fb8075a4984252390d3078bcd250d20f620
+Author: Jared Pérez Vega <jrd.perez88@gmail.com>
+Date:   Fri Jun 11 12:27:49 2021 +0100
+
+    Initial commit

@@ -29,11 +29,13 @@ class DefaultHomePresenterErrorTest: XCTestCase {
 
     func testHomePresenterViewDidLoadError() throws {
         presenter.onViewDidLoad()
+        Thread.sleep(forTimeInterval: 1)
         XCTAssertTrue(viewController.isShowErrorCalled)
     }
     
     func testHomePresenterSomeViewPressedError() throws {
         presenter.someMoviePressed(movieID: "riddick")
+        Thread.sleep(forTimeInterval: 1)
         XCTAssertTrue(viewController.isShowErrorCalled)
     }
     

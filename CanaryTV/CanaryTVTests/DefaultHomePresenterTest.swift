@@ -29,11 +29,13 @@ class DefaultHomePresenterTest: XCTestCase {
 
     func testHomePresenterViewDidLoad() throws {
         presenter.onViewDidLoad()
+        Thread.sleep(forTimeInterval: 1)
         XCTAssertTrue(viewController.isDefaultHomeViewControllerTestCalled)
     }
     
     func testHomePresenterSomeViewPressed() throws {
         presenter.someMoviePressed(movieID: "riddick")
+        Thread.sleep(forTimeInterval: 1)
         XCTAssertTrue(router.isDefaultHomeRouterMock)
     }
     

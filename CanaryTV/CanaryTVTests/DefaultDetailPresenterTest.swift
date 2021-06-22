@@ -42,11 +42,13 @@ class DefaultDetailPresenterTest: XCTestCase {
 
     func testDetailPresenterViewDidLoad() throws {
         presenter.onViewDidLoad()
+        Thread.sleep(forTimeInterval: 1)
         XCTAssertTrue(viewController.isDefaultDetailViewControllerTestCalled)
     }
 
     func testDetailPresenterShowTrailer() throws {
         presenter.showTrailer()
+        Thread.sleep(forTimeInterval: 1)
         XCTAssertTrue(router.isDefaultDetailRouterMock)
     }
     

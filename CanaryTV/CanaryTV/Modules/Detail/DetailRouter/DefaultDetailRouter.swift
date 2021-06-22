@@ -22,9 +22,11 @@ class DefaultDetailRouter: DetailRouter {
     
     func showTrailerScreen(with url: URL) {
         guard let playerViewController = resolver.resolve(PlayerViewController.self, argument: url) else { return }
-        viewController.navigationController?.present(playerViewController, animated: true, completion: {
-            playerViewController.player?.play()
-        })
+        DispatchQueue.main.async { [weak self] in
+            self?.viewController.navigationController?.present(playerViewController, animated: true, completion: {
+                playerViewController.player?.play()
+            })
+        }
     }
         
 }

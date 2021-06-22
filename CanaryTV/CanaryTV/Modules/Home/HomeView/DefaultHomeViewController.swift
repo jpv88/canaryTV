@@ -56,7 +56,9 @@ extension DefaultHomeViewController: ListMoviesActions {
     }
     
     func updateUI() {
-        tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
     
 }

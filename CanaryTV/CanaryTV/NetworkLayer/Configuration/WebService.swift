@@ -13,13 +13,30 @@ enum MyCustomError: Error {
     case ApiError(String)
 }
 
-class WebService {
+class WebService: NSObject, URLSessionTaskDelegate {
     
     private let decoder = JSONDecoder()
     
-    init() {
+    override init() {
         decoder.dateDecodingStrategy = .deferredToDate
         decoder.keyDecodingStrategy = .convertFromSnakeCase
+    }
+        
+    func load<T>(type: T.Type, endpoint: Endpoint, completionHandler: @escaping (T) -> Void, errorHandler: @escaping (Error) -> Void) async throws -> T where T: Decodable {
+        
+        let myRequest = endpoint.getRequest
+        
+        let urlRequest = try URLRequest(url: myRequest.path, method: myRequest.method, headers: Constants.API.headers)
+        let aux = try await URLSession.shared.data(for: urlRequest, delegate: self)
+        guard let httpResponse = aux.1 as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw MyCustomError.ApiError("API is down")
+        }
+        let data = aux.0
+        guard let object = try? decoder.decode(T.self, from: data) else {
+            throw MyCustomError.NoParsedModel("Model could not be parsed")
+        }
+        
+        return object
     }
     
     func loadFromWebService<T>(type: T.Type, endpoint: Endpoint, completionHandler: @escaping (T) -> Void, errorHandler: @escaping (Error) -> Void) where T: Decodable {

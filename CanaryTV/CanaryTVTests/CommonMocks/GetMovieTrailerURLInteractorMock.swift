@@ -10,8 +10,9 @@ import XCTest
 
 class GetMovieTrailerURLInteractorMock: GetMovieTrailerURLInteractor {
     
-    override func execute(input: GetMovieTrailerURLInteractor.Input, completion: @escaping (GetMovieTrailerURLInteractor.Output) -> Void, errorHandler: @escaping (Error) -> Void) {
-        guard let url = URL(string: "https://www.google.es/") else { return }
-        completion(url)
+    override func execute(input: GetMovieTrailerURLInteractor.Input) async throws -> GetMovieTrailerURLInteractor.Output {
+        guard let url = URL(string: "https://www.google.es/") else { fatalError("No URL") }
+        return url
     }
+
 }

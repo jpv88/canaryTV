@@ -9,10 +9,11 @@ import XCTest
 @testable import CanaryTV
 
 class ListMoviesInteractorMock: ListMoviesInteractor {
-    override func execute(completion: @escaping (ListMoviesInteractor.Output) -> Void, errorHandler: @escaping (Error) -> Void) {
-        guard let file = readLocalFile(forName: "ListMoviesModelJSON") else { return }
-        guard let model = parse(jsonData: file) else { return }
-        completion(model)
+    
+    override func execute() async throws -> ListMoviesInteractor.Output {
+        guard let file = readLocalFile(forName: "ListMoviesModelJSON") else { fatalError("No file") }
+        guard let model = parse(jsonData: file) else { fatalError("No model") }
+        return model
     }
     
     private func readLocalFile(forName name: String) -> Data? {

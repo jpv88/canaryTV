@@ -9,8 +9,9 @@ import XCTest
 @testable import CanaryTV
 
 class ListMoviesInteractorErrorMock: ListMoviesInteractor {
-    override func execute(completion: @escaping (ListMoviesInteractor.Output) -> Void, errorHandler: @escaping (Error) -> Void) {
-        errorHandler(MyCustomError.ApiError("Custom Error"))
+    
+    override func execute() async throws -> ListMoviesInteractor.Output {
+        throw MyCustomError.ApiError("Custom Error")
     }
     
 }

@@ -10,8 +10,8 @@ import XCTest
 
 class GetMovieDetailInteractorErrorMock: GetMovieDetailInteractor {
     
-    override func execute(input: GetMovieDetailInteractor.Input, completion: @escaping (GetMovieDetailInteractor.Output) -> Void, errorHandler: @escaping (Error) -> Void) {
-        errorHandler(MyCustomError.ApiError("Custom Error"))
+    override func execute(input: GetMovieDetailInteractor.Input) async throws -> GetMovieDetailInteractor.Output {
+        throw MyCustomError.ApiError("Custom Error")
     }
     
 }

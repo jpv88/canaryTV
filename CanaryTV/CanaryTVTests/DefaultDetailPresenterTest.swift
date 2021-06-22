@@ -22,10 +22,9 @@ class DefaultDetailPresenterTest: XCTestCase {
     override func setUpWithError() throws {
       try super.setUpWithError()
         let exp = expectation(description: "\(#function)\(#line)")
-        getMovieDetailInteractorMock.execute(input: "") { [weak self] result in
-            self?.model = result
-            exp.fulfill()
-        } errorHandler: { error in
+        async {
+            let model = try await getMovieDetailInteractorMock.execute(input: "")
+            self.model = model
             exp.fulfill()
         }
         waitForExpectations(timeout: 3, handler: nil)

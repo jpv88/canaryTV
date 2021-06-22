@@ -10,10 +10,10 @@ import XCTest
 
 class GetMovieDetailInteractorMock: GetMovieDetailInteractor {
     
-    override func execute(input: GetMovieDetailInteractor.Input, completion: @escaping (GetMovieDetailInteractor.Output) -> Void, errorHandler: @escaping (Error) -> Void) {
-        guard let file = readLocalFile(forName: "MovieDetailInfoModelJSON") else { return }
-        guard let model = parse(jsonData: file) else { return }
-        completion(model)
+    override func execute(input: GetMovieDetailInteractor.Input) async throws -> GetMovieDetailInteractor.Output {
+        guard let file = readLocalFile(forName: "MovieDetailInfoModelJSON") else { fatalError("No File") }
+        guard let model = parse(jsonData: file) else { fatalError("No Model") }
+        return model
     }
     
     private func readLocalFile(forName name: String) -> Data? {

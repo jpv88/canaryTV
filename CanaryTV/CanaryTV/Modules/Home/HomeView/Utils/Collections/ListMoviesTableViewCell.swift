@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ListMoviesTableItemPressed {
-    func pressedItem(itemID: String) async
+    func pressedItem(itemID: String)
 }
 
 class ListMoviesTableViewCell: UITableViewCell {

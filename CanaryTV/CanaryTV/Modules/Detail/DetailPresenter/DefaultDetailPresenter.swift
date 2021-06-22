@@ -31,14 +31,16 @@ class DefaultDetailPresenter: DetailPresenter {
         view?.showThisInfo(image: imageURL, title: title, description: description, rating: rating, year: year, duration: duration)
     }
 
-    func showTrailer() async {
+    func showTrailer() {
         guard let id = dataModel.data?.id else { return }
         guard let trailers = dataModel.data?.viewOptions?.public?.trailers, let audioLanguages = trailers[0].audioLanguages, let languageID = audioLanguages[0].id, let subtitles = trailers[0].subtitleLanguages, let subtitleID = subtitles[0].id else { return }
-        do {
-            let url = try await trailerMovieInteractor.execute(input: (id, languageID, subtitleID))
-            playVideo(url: url)
-        } catch {
-            view?.showThisError(error: error)
+        async {
+            do {
+                let url = try await trailerMovieInteractor.execute(input: (id, languageID, subtitleID))
+                playVideo(url: url)
+            } catch {
+                view?.showThisError(error: error)
+            }
         }
     }
     

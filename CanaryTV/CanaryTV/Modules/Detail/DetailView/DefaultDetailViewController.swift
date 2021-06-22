@@ -47,8 +47,8 @@ class DefaultDetailViewController: BaseViewController {
         layoutView()
     }
     
-    @objc func trailerButtonTapped(sender : UIButton) async {
-        await presenter?.showTrailer()
+    @objc func trailerButtonTapped(sender : UIButton) {
+        presenter?.showTrailer()
     }
 }
 

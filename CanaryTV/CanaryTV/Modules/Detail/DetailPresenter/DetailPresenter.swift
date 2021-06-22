@@ -10,5 +10,5 @@ import Foundation
 
 protocol DetailPresenter {
     func onViewDidLoad()
-    func showTrailer() async
+    func showTrailer()
 }

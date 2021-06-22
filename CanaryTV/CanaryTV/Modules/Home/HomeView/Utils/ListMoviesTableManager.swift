@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ListMoviesActions {
-    func someMoviePressed(movieID: String) async
+    func someMoviePressed(movieID: String)
     func updateUI()
 }
 
@@ -49,8 +49,8 @@ class ListMoviesTableManager: NSObject, UITableViewDelegate, UITableViewDataSour
 
 extension ListMoviesTableManager: ListMoviesTableItemPressed {
     
-    func pressedItem(itemID: String) async {
-        await delegate?.someMoviePressed(movieID: itemID)
+    func pressedItem(itemID: String) {
+        delegate?.someMoviePressed(movieID: itemID)
     }
         
 }

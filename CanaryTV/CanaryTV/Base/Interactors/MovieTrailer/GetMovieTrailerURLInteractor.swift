@@ -19,16 +19,16 @@ class GetMovieTrailerURLInteractor: InOutInteractor<GetMovieTrailerURLInteractor
         super.init()
     }
     
-    override func execute(input: Input, completion: @escaping (Output) -> Void, errorHandler: @escaping (Error) -> Void) {
+    override func execute(input: Input) async throws -> Output {
         
-        webService.loadFromWebService(type: MovieTrailerModel.self, endpoint: .Trailer(movieID: input.movieID, languageID: input.languageID, subtitleID: input.subtitleID)) { result in
-            guard let streamInfo = result.data?.streamInfos, let urlParam = streamInfo[0].url, let url = URL(string: urlParam) else {
-                errorHandler(MyCustomError.ApiError("Some is wrong"))
-                return
+        do {
+            let object = try await webService.load(type: MovieTrailerModel.self, endpoint: .Trailer(movieID: input.movieID, languageID: input.languageID, subtitleID: input.subtitleID))
+            guard let streamInfo = object.data?.streamInfos, let urlParam = streamInfo[0].url, let url = URL(string: urlParam) else {
+                throw MyCustomError.NoParsedModel("Couldnt get url")
             }
-            completion(url)
-        } errorHandler: { error in
-            errorHandler(error)
+            return url
+        } catch {
+            throw MyCustomError.ApiError("Api Error")
         }
 
     }

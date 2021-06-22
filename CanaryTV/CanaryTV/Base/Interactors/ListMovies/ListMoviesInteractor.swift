@@ -18,67 +18,29 @@ class ListMoviesInteractor: OutputInteractor<ListMoviesInteractor.Output> {
         super.init()
     }
     
-    override func execute(completion: @escaping (Output) -> Void, errorHandler: @escaping (Error) -> Void) {
+    override func execute() async throws -> Output {
         
         var moviesList: [ListMoviesModel] = []
-        let group = DispatchGroup()
         
-        group.enter()
-        webService.loadFromWebService(type: ListMoviesModel.self, endpoint: .FreeMovies) { result in
-            moviesList.append(result)
-            group.leave()
-        } errorHandler: { error in
-            group.leave()
-        }
-        
-        group.enter()
-        webService.loadFromWebService(type: ListMoviesModel.self, endpoint: .LastMovies) { result in
-            moviesList.append(result)
-            group.leave()
-        } errorHandler: { error in
-            group.leave()
-        }
-        
-        group.enter()
-        webService.loadFromWebService(type: ListMoviesModel.self, endpoint: .StoriesMovies) { result in
-            moviesList.append(result)
-            group.leave()
-        } errorHandler: { error in
-            group.leave()
-        }
-        
-        group.enter()
-        webService.loadFromWebService(type: ListMoviesModel.self, endpoint: .ActionMovies) { result in
-            moviesList.append(result)
-            group.leave()
-        } errorHandler: { error in
-            group.leave()
-        }
-        
-        group.enter()
-        webService.loadFromWebService(type: ListMoviesModel.self, endpoint: .CinemaMovies) { result in
-            moviesList.append(result)
-            group.leave()
-        } errorHandler: { error in
-            group.leave()
-        }
-        
-        group.enter()
-        webService.loadFromWebService(type: ListMoviesModel.self, endpoint: .ComedyMovies) { result in
-            moviesList.append(result)
-            group.leave()
-        } errorHandler: { error in
-            group.leave()
-        }
-
-        group.notify(queue: .main) {
-            // All requests completed
-            if moviesList.isEmpty {
-                errorHandler(MyCustomError.ApiError("Something is wrong in backend"))
-            } else {
-                completion(moviesList)
-            }
-        }
+        do {
+            let freeMovies = try await webService.load(type: ListMoviesModel.self, endpoint: .FreeMovies)
+            let lastMovies = try await webService.load(type: ListMoviesModel.self, endpoint: .LastMovies)
+            let storiesMovies = try await webService.load(type: ListMoviesModel.self, endpoint: .StoriesMovies)
+            let actionMovies = try await webService.load(type: ListMoviesModel.self, endpoint: .ActionMovies)
+            let cinemaMovies = try await webService.load(type: ListMoviesModel.self, endpoint: .CinemaMovies)
+            let comedyMovies = try await webService.load(type: ListMoviesModel.self, endpoint: .ComedyMovies)
+            moviesList = [
+                freeMovies,
+                lastMovies,
+                storiesMovies,
+                actionMovies,
+                cinemaMovies,
+                comedyMovies
+            ]
+            return moviesList
+        } catch {
+            throw MyCustomError.ApiError("Api Error")
+        }        
 
     }
     

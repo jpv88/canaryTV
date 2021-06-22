@@ -19,21 +19,13 @@ class GetMovieDetailInteractor: InOutInteractor<GetMovieDetailInteractor.Input, 
         super.init()
     }
     
-//    func exe(input: Input) async -> Output {
-//                
-//    
-//        
-//        
-//    }
-    
-    override func execute(input: Input, completion: @escaping (Output) -> Void, errorHandler: @escaping (Error) -> Void) {
-        
-        webService.loadFromWebService(type: MovieDetailInfoModel.self, endpoint: .Movie(movieID: input)) { result in
-            completion(result)
-        } errorHandler: { error in
-            errorHandler(error)
+    override func execute(input: Input) async throws -> Output {        
+        do {
+            let object = try await webService.load(type: MovieDetailInfoModel.self, endpoint: .Movie(movieID: input))
+            return object
+        } catch {
+            throw MyCustomError.ApiError("Api Error")
         }
-
     }
     
 }

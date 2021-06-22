@@ -8,6 +8,6 @@
 import Foundation
 
 protocol HomePresenter {
-    func onViewDidLoad()
-    func someMoviePressed(movieID: String)
+    func onViewDidLoad() async
+    func someMoviePressed(movieID: String) async
 }

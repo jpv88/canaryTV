@@ -21,21 +21,26 @@ class DefaultHomePresenter: HomePresenter {
         self.getMovieDetailInfoInteractor = getMovieDetailInfoInteractor
     }
     
-    func onViewDidLoad() {
-        listMoviesInteractor.execute { [weak self] result in
-            self?.view?.showLoadedInfo(input: result)
-        } errorHandler: { [weak self] error in
-            self?.view?.showThisError(error: error)
+    func onViewDidLoad() async {
+        await getListMovies()
+    }
+    
+    private func getListMovies() async {
+        do {
+            let listMovies = try await listMoviesInteractor.execute()
+            view?.showLoadedInfo(input: listMovies)
+        } catch  {
+            view?.showThisError(error: error)
         }
     }
     
-    func someMoviePressed(movieID: String) {
-        getMovieDetailInfoInteractor.execute(input: movieID) { [weak self] result in
-            self?.router.showDetailView(movieDetail: result)
-        } errorHandler: { [weak self] error in
-            self?.view?.showThisError(error: error)
+    func someMoviePressed(movieID: String) async {
+        do {
+            let movieDetail = try await getMovieDetailInfoInteractor.execute(input: movieID)
+            router.showDetailView(movieDetail: movieDetail)
+        } catch {
+            view?.showThisError(error: error)
         }
-
     }
         
 }

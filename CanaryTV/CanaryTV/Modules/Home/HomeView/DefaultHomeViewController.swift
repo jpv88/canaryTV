@@ -21,7 +21,7 @@ class DefaultHomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter?.onViewDidLoad()
+        await presenter?.onViewDidLoad()
     }
     
     override func buildComponents() {
@@ -51,8 +51,8 @@ extension DefaultHomeViewController: HomeViewController {
 
 extension DefaultHomeViewController: ListMoviesActions {
     
-    func someMoviePressed(movieID: String) {
-        presenter?.someMoviePressed(movieID: movieID)
+    func someMoviePressed(movieID: String) async {
+        await presenter?.someMoviePressed(movieID: movieID)
     }
     
     func updateUI() {

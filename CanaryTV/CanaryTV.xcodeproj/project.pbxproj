@@ -46,7 +46,6 @@
 		7FFED40B26738A6800A8D967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FFED40A26738A6800A8D967 /* Assets.xcassets */; };
 		7FFED40E26738A6800A8D967 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFED40C26738A6800A8D967 /* LaunchScreen.storyboard */; };
 		7FFED42426738A6A00A8D967 /* CanaryTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED42326738A6A00A8D967 /* CanaryTVUITests.swift */; };
-		7FFED43826739D8800A8D967 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7FFED43726739D8800A8D967 /* Alamofire */; };
 		7FFED43B26739ED600A8D967 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 7FFED43A26739ED600A8D967 /* Swinject */; };
 		7FFED4462673A3ED00A8D967 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4442673A3EC00A8D967 /* WebService.swift */; };
 		7FFED4472673A3ED00A8D967 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFED4452673A3ED00A8D967 /* Endpoint.swift */; };
@@ -198,7 +197,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FFED43826739D8800A8D967 /* Alamofire in Frameworks */,
 				7FFED43B26739ED600A8D967 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,7 +571,6 @@
 			);
 			name = CanaryTV;
 			packageProductDependencies = (
-				7FFED43726739D8800A8D967 /* Alamofire */,
 				7FFED43A26739ED600A8D967 /* Swinject */,
 			);
 			productName = CanaryTV;
@@ -648,7 +645,6 @@
 			);
 			mainGroup = 7FFED3F526738A6100A8D967;
 			packageReferences = (
-				7FFED43626739D8800A8D967 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				7FFED43926739ED600A8D967 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 7FFED3FF26738A6100A8D967 /* Products */;
@@ -1095,14 +1091,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7FFED43626739D8800A8D967 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = exactVersion;
-				version = 5.4.3;
-			};
-		};
 		7FFED43926739ED600A8D967 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -1114,11 +1102,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7FFED43726739D8800A8D967 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7FFED43626739D8800A8D967 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		7FFED43A26739ED600A8D967 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7FFED43926739ED600A8D967 /* XCRemoteSwiftPackageReference "Swinject" */;

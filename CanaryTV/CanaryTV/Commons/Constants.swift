@@ -6,14 +6,10 @@
 //
 
 import Foundation
-import Alamofire
 
 struct Constants {
     struct API {
         static let host = "https://gizmo.rakuten.tv"
-        static let headers: HTTPHeaders = [
-            "Content-Type": "application/json"
-        ]
         static let apiVersion = "v3"
         static let queryItems = [
             URLQueryItem(name: "classification_id", value: "6"),

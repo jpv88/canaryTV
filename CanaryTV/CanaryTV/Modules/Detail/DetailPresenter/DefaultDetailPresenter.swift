@@ -36,7 +36,9 @@ class DefaultDetailPresenter: DetailPresenter {
         guard let trailers = dataModel.data?.viewOptions?.public?.trailers, let audioLanguages = trailers[0].audioLanguages, let languageID = audioLanguages[0].id, let subtitles = trailers[0].subtitleLanguages, let subtitleID = subtitles[0].id else { return }
         async {
             do {
+                await view?.showLoader()
                 let url = try await trailerMovieInteractor.execute(input: (id, languageID, subtitleID))
+                await view?.hideLoader()
                 playVideo(url: url)
             } catch {
                 view?.showThisError(error: error)

@@ -28,8 +28,10 @@ class DefaultHomePresenter: HomePresenter {
     private func getListMovies() {
         async {
             do {
+                await view?.showLoader()
                 let listMovies = try await listMoviesInteractor.execute()
                 view?.showLoadedInfo(input: listMovies)
+                await view?.hideLoader()
             } catch  {
                 view?.showThisError(error: error)
             }
@@ -39,7 +41,9 @@ class DefaultHomePresenter: HomePresenter {
     func someMoviePressed(movieID: String) {
         async {
             do {
+                await view?.showLoader()
                 let movieDetail = try await getMovieDetailInfoInteractor.execute(input: movieID)
+                await view?.hideLoader()
                 router.showDetailView(movieDetail: movieDetail)
             } catch {
                 view?.showThisError(error: error)

@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIViewController {
-    func showLoader() {
+    @objc func showLoader() {
         DispatchQueue.main.async {
             let activity = UIActivityIndicatorView()
             let backgroundAlphaView = UIView(frame: self.view.bounds)

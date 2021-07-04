@@ -9,3 +9,7 @@ Regarding technical details, it is used:
 * Alamofire for the network layer
 * VIPER architecture
 * Swinject for dependency injection
+
+### Requirements 🤓
+* iOS 15.0
+* Xcode 13.0

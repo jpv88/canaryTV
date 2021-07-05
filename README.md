@@ -6,7 +6,6 @@ This app allows the user to view trailers of current series and movies.
 
 Regarding technical details, it is used:
 * API provided by [Rakuten](https://rakuten.es/)
-* Alamofire for the network layer
 * VIPER architecture
 * Swinject for dependency injection
 
